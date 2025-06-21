@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avrupa Göç Danışmanlığı - Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Dots/Lines ve Uçan Uçaklar (Global) -->
+    <!-- KALDIRILDI: <div class="animated-dots"></div> -->
+    <!-- KALDIRILDI: <div class="flying-planes"></div> -->
+
+    <!-- Header Bölümü -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="https://avrupagoc.com/wp-content/uploads/2023/12/Avrupag.png" alt="Avrupa Göç Logo" style="height: 40px; width: auto;">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="/" class="active">Ana Sayfa</a></li>
+                <li><a href="/hakkimizda">Hakkımızda</a></li>
+                <li><a href="/hizmetler">Hizmetler</a></li>
+                <li><a href="/vizeler">Vize Türleri</a></li>
+                <li><a href="/iletisim">İletişim</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="#consultation" class="consultation-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Ücretsiz Öngörüşme</span>
+                </a>
+            </div>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Bölümü -->
+    <section class="hero">
+        <div class="hero-background">
+            <!-- Arka plan efektleri kaldırıldı -->
+        </div>
+        
+        <div class="hero-content">
+            <!-- Sol: Fotoğraf -->
+            <div class="hero-image-section">
+                <div class="hero-image-container">
+                    <img src="https://www.openenglish.com.tr/wp-content/uploads/sites/3/2022/11/Desktop-1440px-hp-hero-section-img-1x.png" alt="Avrupa Göç Danışmanlığı" class="hero-main-image">
+                    <div class="image-glow-effect"></div>
+                </div>
+            </div>
+            
+            <!-- Orta: Yazı ve Butonlar -->
+            <div class="hero-text-section">
+                <div class="hero-text">
+                    <div class="badge">
+                        <i class="fas fa-star"></i>
+                        <span>10+ Yıllık Deneyim</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="title-line">Avrupa'ya</span>
+                        <span class="title-line highlight">Yeni Hayat</span>
+                        <span class="title-line">Başlatın</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">Profesyonel vize danışmanlığı ile hayalinizdeki Avrupa'ya güvenle gidin. Binlerce başarılı vize başvurusu ile güvenilir çözüm ortağınız.</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Başarılı Vize</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Başarı Oranı</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Destek</div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <a href="#hizmetler" class="cta-button primary">
+                            <i class="fas fa-rocket"></i>
+                            <span>Hizmetlerimiz</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <a href="#iletisim" class="cta-button secondary">
+                            <i class="fas fa-phone"></i>
+                            <span>Ücretsiz Danışmanlık</span>
+                        </a>
+                    </div>
+                    
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Güvenli Başvuru</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Hızlı Süreç</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-users"></i>
+                            <span>Uzman Ekip</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sağ: Form -->
+            <div class="hero-form-section">
+                <div class="hero-form-container">
+                    <div class="form-header">
+                        <h3>Ücretsiz Danışmanlık</h3>
+                        <p>Uzman ekibimizle iletişime geçin</p>
+                    </div>
+                    
+                    <form class="hero-contact-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-field">
+                                    <label for="hero-firstname">İsim <span class="required">*</span></label>
+                                    <input type="text" id="hero-firstname" name="firstname" placeholder="İsminizi giriniz" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="hero-lastname">Soyisim <span class="required">*</span></label>
+                                    <input type="text" id="hero-lastname" name="lastname" placeholder="Soyisminizi giriniz" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hero-email">E-posta <span class="required">*</span></label>
+                            <input type="email" id="hero-email" name="email" placeholder="E-posta adresinizi giriniz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hero-phone">Telefon <span class="required">*</span></label>
+                            <input type="tel" id="hero-phone" name="phone" placeholder="Telefon numaranızı giriniz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Hedef Ülke <span class="required">*</span></label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="country" value="almanya" required>
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-label">Almanya</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="country" value="italya" required>
+                                    <span class="radio-custom"></span>
+                                    <span class="radio-label">İtalya</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hero-service">Seçilen Hizmet <span class="required">*</span></label>
+                            <select id="hero-service" name="service" required>
+                                <option value="" disabled selected>Hizmet seçiniz</option>
+                                <option value="lisans">Lisans</option>
+                                <option value="yukseklisans">Yüksek Lisans</option>
+                                <option value="dilkursu">Dil Kursu</option>
+                                <option value="yazokulu">Yaz Okulu</option>
+                                <option value="workandtravel">Work and Travel</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hero-message">Eklemek istediğiniz not</label>
+                            <textarea id="hero-message" name="message" rows="3" placeholder="Mesajınızı giriniz (isteğe bağlı)"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="hero-form-submit-btn">
+                                <span>Hemen Başvur</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ülke Seçim Bölümü -->
+    <section class="countries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hedef Ülkenizi Seçin</h2>
+                <p>Size en uygun ülke ve programı keşfedin</p>
+            </div>
+            
+            <!-- Almanya Bölümü -->
+            <div class="country-card germany">
+                <div class="country-bg">
+                    <img src="https://d3dqioy2sca31t.cloudfront.net/Projects/cms/production/000/031/401/large/578155ed0242d97af7ff9c8e1d9423fd/article-germany-rhine-bacharach-evening.jpg" alt="Almanya Manzara">
+                </div>
+                <div class="country-content">
+                    <div class="country-text">
+                        <div class="country-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/960px-Flag_of_Germany.svg.png" alt="Almanya Bayrağı" class="flag">
+                            <h3>Almanya</h3>
+                        </div>
+                        <p>Almanya, Avrupa'nın en güçlü ekonomilerinden biri olarak eğitim ve kariyer fırsatları sunar. Ücretsiz eğitim sistemi, yüksek yaşam kalitesi ve güçlü iş pazarı ile öğrenciler için ideal bir destinasyondur.</p>
+                        <div class="features">
+                            <span><i class="fas fa-graduation-cap"></i> Ücretsiz Eğitim</span>
+                            <span><i class="fas fa-chart-line"></i> Güçlü Ekonomi</span>
+                            <span><i class="fas fa-users"></i> Çok Kültürlü</span>
+                            </div>
+                            </div>
+                    <div class="services-grid">
+                        <a href="/almanya/universite" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Üniversite</h4>
+                                <p>Lisans ve Yüksek Lisans</p>
+                            </div>
+                        </a>
+                        <a href="/almanya/dil-okulu" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Dil Okulu</h4>
+                                <p>Almanca Öğrenme</p>
+                            </div>
+                        </a>
+                        <a href="/almanya/goc" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Göç</h4>
+                                <p>Kalıcı İkamet</p>
+                            </div>
+                        </a>
+                        <a href="/almanya/yaz-kampi" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-campground"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Yaz Kampları</h4>
+                                <p>Yaz Tatili</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- İtalya Bölümü -->
+            <div class="country-card italy">
+                <div class="country-bg">
+                    <img src="https://b2ccdn.coraltatil.com/content/newsImages/News_14032025082613.jpg" alt="İtalya Manzara">
+                </div>
+                <div class="country-content reverse">
+                    <div class="services-grid">
+                        <a href="/italya/universite" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Üniversite</h4>
+                                <p>Lisans ve Yüksek Lisans</p>
+                            </div>
+                        </a>
+                        <a href="/italya/dil-okulu" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Dil Okulu</h4>
+                                <p>İtalyanca Öğrenme</p>
+                            </div>
+                        </a>
+                        <a href="/italya/goc" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Göç</h4>
+                                <p>Kalıcı İkamet</p>
+                            </div>
+                        </a>
+                        <a href="/italya/yaz-kampi" class="service-card">
+                            <div class="card-icon">
+                                <i class="fas fa-campground"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Yaz Kampları</h4>
+                                <p>Yaz Tatili</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="country-text">
+                        <div class="country-header">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/250px-Flag_of_Italy.svg.png" alt="İtalya Bayrağı" class="flag">
+                            <h3>İtalya</h3>
+                        </div>
+                        <p>İtalya, tarihi zenginlikleri, sanat ve kültürü ile dünyaca ünlü bir ülkedir. Kaliteli eğitim sistemi, lezzetli mutfağı ve sıcak insanları ile öğrenciler için mükemmel bir seçenektir.</p>
+                        <div class="features">
+                            <span><i class="fas fa-palette"></i> Sanat ve Kültür</span>
+                            <span><i class="fas fa-utensils"></i> Lezzetli Mutfak</span>
+                            <span><i class="fas fa-heart"></i> Sıcak İnsanlar</span>
+                            </div>
+                            </div>
+                            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Süreç Bölümü -->
+    <section class="process-section">
+        <div class="hero-background"></div>
+
+        <div class="content-section">
+            <div class="section-header process-header">
+                <h2 class="process-title">
+                    <span class="title-line">Nasıl</span>
+                    <span class="title-line highlight">Çalışıyoruz?</span>
+                </h2>
+                
+                <p class="process-subtitle">3 basit adımda hayalinizdeki Avrupa'ya gidin. Uzman ekibimizle birlikte her adımı planlayın, belgelerinizi hazırlayın ve başarıya ulaşın. Deneyimli danışmanlarımız size rehberlik ederken, tüm süreç boyunca yanınızda olacağız.</p>
+            </div>
+            
+            <div class="process-container" style="position:relative;">
+                <!-- SVG Kırık Çizgi -->
+                <svg class="process-svg" width="100%" height="600" viewBox="0 0 1200 600" style="position:absolute;top:0;left:0;z-index:1;pointer-events:none;">
+                    <!-- 1. aşamadan 2. aşamaya L çizgisi -->
+                    <polyline points="180,450 180,300 600,300" fill="none" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- 2. aşamadan 3. aşamaya L çizgisi -->
+                    <polyline points="600,300 600,130 1020,130" fill="none" stroke="#3b82f6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="process-steps">
+                    <!-- 1. Aşama - Sol Alt -->
+                    <div class="step-item step-1">
+                        <div class="step-circle">
+                            <span class="step-number">1</span>
+                            <span class="step-title">Aşama</span>
+                        </div>
+                        <div class="step-content">
+                            <h3>İletişim</h3>
+                            <p>Bizimle iletişime geçin ve hedeflerinizi paylaşın. Uzman ekibimiz size en uygun seçenekleri sunacak.</p>
+                        </div>
+                    </div>
+                    <!-- 2. Aşama - Orta -->
+                    <div class="step-item step-2">
+                        <div class="step-circle">
+                            <span class="step-number">2</span>
+                            <span class="step-title">Aşama</span>
+                        </div>
+                        <div class="step-content">
+                            <h3>Belge Hazırlığı</h3>
+                            <p>Gerekli tüm belgeleri birlikte hazırlayalım. Başvuru süreciniz için eksiksiz dosya oluşturalım.</p>
+                        </div>
+                    </div>
+                    <!-- 3. Aşama - Sağ Üst -->
+                    <div class="step-item step-3">
+                        <div class="step-circle">
+                            <span class="step-number">3</span>
+                            <span class="step-title">Aşama</span>
+                        </div>
+                        <div class="step-content">
+                            <h3>Onay</h3>
+                            <p>Başvurunuz onaylandı! Artık yeni hayatınıza başlayabilirsiniz. Biz her zaman yanınızdayız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Üniversite Logoları Slider Section -->
+    <section class="universities-section">
+        <div class="hero-background"></div>
+
+        <div class="content-section">
+            <div class="universities-slider-container">
+                <div class="universities-slider">
+                    <div class="slider-track">
+                        <!-- Üniversite Logoları -->
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/30.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/29.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/28.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/27.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/26.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/25.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/24.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/23.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/22.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/21.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/20.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/19.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/18.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/17.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/16.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/15.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/14.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/13.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/12.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/11.png" alt="Üniversite Logo">
+                        </div>
+                        <!-- Tekrar eden logolar (sürekli kayma için) -->
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/30.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/29.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/28.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/27.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/26.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/25.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/24.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/23.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/22.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/21.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/20.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/19.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/18.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/17.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/16.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/15.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/14.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/13.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/12.png" alt="Üniversite Logo">
+                        </div>
+                        <div class="university-logo">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/05/11.png" alt="Üniversite Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ücretsiz Görüşme Banner -->
+    <section class="consultation-banner-section">
+        <div class="content-section">
+            <div class="consultation-banner">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h2>Ücretsiz Görüşme Alın</h2>
+                        <p>Uzman ekibimizle birebir görüşerek size en uygun programı belirleyelim. Avrupa hayalinizi gerçeğe dönüştürmek için ilk adımı atın.</p>
+                        <div class="banner-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>15 dakika ücretsiz danışmanlık</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Uzman danışman eşliğinde</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-gift"></i>
+                                <span>Kişiselleştirilmiş program önerisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="banner-action">
+                        <a href="#iletisim" class="banner-cta-btn">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Ücretsiz Görüşme Talep Et</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Başarı Hikayeleri Section -->
+        <section class="success-stories-section">
+            <div class="content-section">
+                <div class="success-stories-container">
+                    <!-- Üst: Başlık ve Kısa Açıklama -->
+                    <div class="success-header">
+                        <h2 class="success-title">
+                            <span class="title-line">Öğrencilerimizin</span>
+                            <span class="title-line highlight">Başarı Hikayeleri</span>
+                        </h2>
+                        <p class="success-subtitle">
+                            Avrupa'ya giden yolculuklarında öğrencilerimizin yaşadığı deneyimleri dinleyin ve ilham alın.
+                        </p>
+                    </div>
+                    
+                    <!-- Alt: Videolar -->
+                    <div class="success-videos">
+                        <div class="video-item">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=lbGY3OYk8S4" title="Başarı Hikayesi 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h3>Almanya'da Üniversite Deneyimi</h3>
+                                <p>Mehmet'in Berlin'deki eğitim yolculuğu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-wrapper">
+                                <iframe width="100%" height="100%" src="https://www.youtube.com/watch?v=ud94R7gosME" title="Başarı Hikayesi 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
+                            <div class="video-info">
+                                <h3>İtalya'da Yaşam ve Eğitim</h3>
+                                <p>Ayşe'nin Milano macerası</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    <!-- Hakkımızda Section (Ekibimiz + Yorumlar) -->
+    <section class="about-combined-section">
+        <div class="hero-background"></div>
+
+        <div class="content-section about-flex">
+            <!-- Sol: Dolu Dolu Yazı -->
+            <div class="about-info">
+                <div class="about-badge">
+                    <i class="fas fa-users"></i>
+                    <span>Uzman Kadro</span>
+                </div>
+                <h2 class="about-title">
+                    <span class="title-line">Avrupa Göç Danışmanlığı</span>
+                    <span class="title-line highlight">Ekibimizle Tanışın</span>
+                </h2>
+                <p class="about-desc">
+                    10 yılı aşkın tecrübemizle, Avrupa'da eğitim ve yaşam hayalinizi gerçeğe dönüştürmek için buradayız. Her biri alanında uzman danışmanlarımız, başvuru sürecinizin her adımında yanınızda. Güvenilir, şeffaf ve çözüm odaklı yaklaşımımızla binlerce öğrencinin yeni bir hayata başlamasına destek olduk. Sizin de hikayenizi birlikte yazalım!
+                </p>
+            </div>
+            <!-- Sağ: Sadece Resimlerden Oluşan Slider -->
+            <div class="team-photos-slider">
+                <div class="team-slider-container">
+                    <div class="team-slider-track">
+                        <!-- Ekip Üyesi 1 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/1.png" alt="Ekip Üyesi 1">
+                        </div>
+                        <!-- Ekip Üyesi 2 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/2.png" alt="Ekip Üyesi 2">
+                        </div>
+                        <!-- Ekip Üyesi 3 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/3.png" alt="Ekip Üyesi 3">
+                        </div>
+                        <!-- Ekip Üyesi 4 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/4.png" alt="Ekip Üyesi 4">
+                        </div>
+                        <!-- Ekip Üyesi 5 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/5.png" alt="Ekip Üyesi 5">
+                        </div>
+                        <!-- Ekip Üyesi 6 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/6.png" alt="Ekip Üyesi 6">
+                        </div>
+                        <!-- Ekip Üyesi 7 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/7.png" alt="Ekip Üyesi 7">
+                        </div>
+                        <!-- Ekip Üyesi 8 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/8.png" alt="Ekip Üyesi 8">
+                        </div>
+                        <!-- Ekip Üyesi 9 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/9.png" alt="Ekip Üyesi 9">
+                        </div>
+                        <!-- Ekip Üyesi 10 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/10.png" alt="Ekip Üyesi 10">
+                        </div>
+                        <!-- Ekip Üyesi 11 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/11.png" alt="Ekip Üyesi 11">
+                        </div>
+                        <!-- Ekip Üyesi 12 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/12.png" alt="Ekip Üyesi 12">
+                        </div>
+                        <!-- Ekip Üyesi 13 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/13.png" alt="Ekip Üyesi 13">
+                        </div>
+                        <!-- Ekip Üyesi 14 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/14.png" alt="Ekip Üyesi 14">
+                        </div>
+                        <!-- Ekip Üyesi 15 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/15.png" alt="Ekip Üyesi 15">
+                        </div>
+                        <!-- Ekip Üyesi 16 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/16.png" alt="Ekip Üyesi 16">
+                        </div>
+                        <!-- Ekip Üyesi 17 -->
+                        <div class="team-photo-item">
+                            <img src="https://avrupagoc.com/wp-content/uploads/2025/04/17.png" alt="Ekip Üyesi 17">
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Kontrolleri -->
+                <div class="team-slider-controls">
+                    <button class="team-slider-btn prev-team" aria-label="Önceki">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="team-slider-dots">
+                        <span class="team-dot active"></span>
+                        <span class="team-dot"></span>
+                        <span class="team-dot"></span>
+                        <span class="team-dot"></span>
+                    </div>
+                    <button class="team-slider-btn next-team" aria-label="Sonraki">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sık Sorulan Sorular Section -->
+    <section class="faq-section">
+        <div class="hero-background"></div>
+
+        <div class="content-section">
+            <div class="section-header faq-header">
+                <h2>Sık Sorulan Sorular</h2>
+                <p>En çok merak edilen konular hakkında bilgi alın</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-list">
+                    <!-- Soru 1 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Vize başvuru süreci ne kadar sürer?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vize başvuru süreci ülkeye ve vize türüne göre değişmektedir. Genellikle öğrenci vizeleri 2-8 hafta, turistik vizeler 1-4 hafta sürmektedir. Tüm belgelerin eksiksiz olması süreci hızlandırır.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 2 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Hangi belgeler gereklidir?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Genel olarak pasaport, fotoğraf, başvuru formu, kabul mektubu (öğrenci vizesi için), finansal belgeler, sağlık sigortası ve uçak bileti rezervasyonu gereklidir. Detaylı liste için bizimle iletişime geçin.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 3 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Almanya'da eğitim ücretsiz mi?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, Almanya'da devlet üniversitelerinde eğitim ücretsizdir. Sadece dönemlik harç (semester fee) ödenir ki bu da genellikle 150-300 Euro arasındadır. Özel üniversitelerde ücret alınır.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 4 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Vize reddedilirse ne yapabilirim?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Vize reddedilirse itiraz hakkınız vardır. Red sebebini öğrenip eksik belgeleri tamamlayarak yeniden başvurabilirsiniz. Uzman ekibimiz size bu süreçte destek olacaktır.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 5 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Dil yeterliliği şartı var mı?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, çoğu ülkede dil yeterliliği şartı vardır. Almanya için TestDaF veya DSH, İtalya için CILS sınavları gerekebilir. Dil kursu başvurularında bu şart aranmayabilir.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 6 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Çalışma izni alabilir miyim?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Öğrenci vizesi ile genellikle haftada 20 saat çalışma izni verilir. Mezuniyet sonrası iş bulma vizesi (Job Seeker Visa) ile daha uzun süre kalabilirsiniz.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 7 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Sağlık sigortası zorunlu mu?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, Avrupa ülkelerinde sağlık sigortası zorunludur. Öğrenciler için özel sağlık sigortası paketleri mevcuttur. Bu konuda size uygun seçenekleri sunabiliriz.</p>
+                        </div>
+                    </div>
+
+                    <!-- Soru 8 -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Konaklama nasıl ayarlanır?</h3>
+                            <div class="faq-icon">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Üniversite yurtları, özel yurtlar, paylaşımlı evler veya aile yanı konaklama seçenekleri mevcuttur. Size en uygun konaklama türünü bulmanızda yardımcı oluruz.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-cta">
+                    <div class="faq-cta-content">
+                        <h3>Başka sorularınız mı var?</h3>
+                        <p>Uzman ekibimizle iletişime geçin, size yardımcı olalım.</p>
+                        <a href="#iletisim" class="faq-cta-btn">
+                            <i class="fas fa-phone"></i>
+                            <span>İletişime Geçin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neden Biz Section -->
+    <section class="why-us-section">
+        <div class="hero-background"></div>
+
+        <div class="content-section">
+            <div class="section-header why-us-header">
+                <h2>Neden Biz?</h2>
+                <p>Binlerce öğrencinin güvenini kazandık</p>
+            </div>
+            
+            <div class="why-us-grid">
+                <!-- Kart 1 - Büyük Yatay -->
+                <div class="why-us-card card-large-horizontal">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Deneyim">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>10+ Yıllık Deneyim</h3>
+                        <p>2014 yılından bu yana binlerce öğrencinin Avrupa hayalini gerçeğe dönüştürdük. Deneyimli ekibimizle her adımda yanınızdayız.</p>
+                    </div>
+                </div>
+                
+                <!-- Kart 2 - Küçük Dikey -->
+                <div class="why-us-card card-small-vertical">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Başarı Oranı">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>%98 Başarı Oranı</h3>
+                        <p>Vize başvurularında %98 başarı oranı ile sektörün öncüsüyüz.</p>
+                    </div>
+                </div>
+                
+                <!-- Kart 3 - Orta Dikey -->
+                <div class="why-us-card card-medium-vertical">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Öğrenciler">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>5000+ Başarılı Öğrenci</h3>
+                        <p>Avrupa'nın farklı ülkelerinde eğitim alan 5000'den fazla öğrencimiz var.</p>
+                    </div>
+                </div>
+                
+                <!-- Kart 4 - Küçük Yatay -->
+                <div class="why-us-card card-small-horizontal">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Destek">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Destek</h3>
+                        <p>Kesintisiz müşteri desteği ile her zaman yanınızdayız.</p>
+                    </div>
+                </div>
+                
+                <!-- Kart 5 - Büyük Dikey -->
+                <div class="why-us-card card-large-vertical">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Ülke Ağı">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-globe-europe"></i>
+                        </div>
+                        <h3>15+ Ülke Ağı</h3>
+                        <p>Almanya, İtalya, Hollanda, İsveç ve daha fazlası. Avrupa'nın en prestijli üniversiteleri ile anlaşmalıyız.</p>
+                    </div>
+                </div>
+                
+                <!-- Kart 6 - Küçük Dikey -->
+                <div class="why-us-card card-small-vertical-2">
+                    <div class="card-bg">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Güvenilirlik">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Güvenilir Ortak</h3>
+                        <p>Resmi acente olarak güvenle çalışıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Bölümü -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 XXX XXX XX XX</p>
+                <p><i class="fas fa-envelope"></i> info@avrupagoc.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sosyal Medya</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Avrupa Göç Danışmanlığı. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
