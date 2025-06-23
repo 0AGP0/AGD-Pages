@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeGoogleReviews();
     initializeTeamSlider();
     initializeFAQ();
+    initializeAnimatedText();
+    initializeProgramsSection();
+    initializeBadgeSlider();
 });
 
 // Animasyonları başlat
@@ -2086,4 +2089,182 @@ function initializeFAQ() {
             }
         });
     }
-} 
+}
+
+// Animasyonlu text değişimi
+function initializeAnimatedText() {
+    const textItems = document.querySelectorAll('.text-item');
+    if (textItems.length === 0) return;
+    
+    let currentIndex = 0;
+    const totalItems = textItems.length;
+    
+    // İlk text'i aktif yap
+    textItems[currentIndex].classList.add('active');
+    
+    // Text değişim fonksiyonu
+    function changeText() {
+        // Mevcut text'i gizle
+        textItems[currentIndex].classList.remove('active');
+        textItems[currentIndex].style.animation = 'textSlideOut 0.5s ease forwards';
+        
+        // Sonraki index'e geç
+        currentIndex = (currentIndex + 1) % totalItems;
+        
+        // Yeni text'i göster
+        setTimeout(() => {
+            textItems[currentIndex].classList.add('active');
+            textItems[currentIndex].style.animation = 'textSlideIn 0.5s ease forwards';
+        }, 500);
+    }
+    
+    // Her 3 saniyede bir text değiştir
+    setInterval(changeText, 3000);
+}
+
+// Programları Kategorilerini Keşfet Section için özel fonksiyonlar
+function initializeProgramsSection() {
+    const programCards = document.querySelectorAll('.program-card');
+    
+    // Program cards için scroll animasyonu
+    const programsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.3, rootMargin: '0px 0px -50px 0px' });
+
+    programCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px) scale(0.9)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        programsObserver.observe(card);
+    });
+
+    // Program cards hover efektleri
+    programCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.zIndex = '10';
+            
+            // Diğer kartları hafifçe soluklaştır
+            programCards.forEach(otherCard => {
+                if (otherCard !== this) {
+                    otherCard.style.opacity = '0.7';
+                    otherCard.style.transform = 'translateY(-5px) scale(0.98)';
+                }
+            });
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.zIndex = '1';
+            
+            // Tüm kartları normal haline getir
+            programCards.forEach(otherCard => {
+                otherCard.style.opacity = '1';
+                otherCard.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    });
+
+    // Program images için özel efektler
+    const programImages = document.querySelectorAll('.program-image');
+    programImages.forEach(image => {
+        // Image click efekti
+        image.addEventListener('click', function() {
+            this.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 300);
+        });
+        
+        // Image hover efekti
+        image.addEventListener('mouseenter', function() {
+            const img = this.querySelector('img');
+            if (img) {
+                img.style.transform = 'scale(1.1)';
+            }
+        });
+        
+        image.addEventListener('mouseleave', function() {
+            const img = this.querySelector('img');
+            if (img) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
+
+    // Section header animasyonu
+    const programsHeader = document.querySelector('.programs-section .section-header');
+    if (programsHeader) {
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.5 });
+
+        programsHeader.style.opacity = '0';
+        programsHeader.style.transform = 'translateY(30px)';
+        programsHeader.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        headerObserver.observe(programsHeader);
+    }
+
+    // Mobil cihazlar için dokunmatik etkileşim
+    if (window.innerWidth <= 768) {
+        programCards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'translateY(-5px) scale(1.01)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    }
+}
+
+// Badge Slider Animasyonu
+function initializeBadgeSlider() {
+    const slides = document.querySelectorAll('.badge-slide');
+    let current = 0;
+    let timer;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev');
+            if (i === index) {
+                slide.classList.add('active');
+            } else if (i === (index - 1 + slides.length) % slides.length) {
+                slide.classList.add('prev');
+            }
+        });
+        current = index;
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+
+    function startAutoSlide() {
+        timer = setInterval(nextSlide, 2500);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(timer);
+    }
+
+    showSlide(0);
+    startAutoSlide();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeBadgeSlider();
+}); 
