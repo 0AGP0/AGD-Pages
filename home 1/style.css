@@ -1,0 +1,5306 @@
+/* Elementor ve WoodMart Tema Boşluklarını Sıfırla */
+.wd-negative-gap,
+.elementor-element,
+.elementor-element-6325b4d,
+.wd-section-stretch-content,
+.e-flex,
+.e-con-boxed,
+.e-con,
+.e-con-inner,
+.e-parent,
+.e-lazyloaded,
+.elementskit-parallax-multi-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Özellikle WoodMart temasının container'larını sıfırla */
+.wd-negative-gap {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    position: relative !important;
+}
+
+/* Elementor section stretch içeriğini tam genişlik yap */
+.wd-section-stretch-content {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    left: 0 !important;
+    position: relative !important;
+}
+
+/* E-con boxed container'ını sıfırla */
+.e-con-boxed {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Body ve HTML'yi de sıfırla */
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+}
+
+/* Tüm elementlerin box-sizing'ini düzelt */
+* {
+    box-sizing: border-box !important;
+}/* CSS dosyası */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-links a:hover {
+    color: #667eea;
+}
+
+.nav-links a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a[href="#iletisim"] {
+    text-decoration: underline;
+    text-decoration-color: #667eea;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    content: '▼';
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-column h4 {
+    color: #667eea;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-column a {
+    display: block;
+    padding: 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.dropdown-column a:hover {
+    color: #667eea;
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.consultation-btn, .catalog-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.consultation-btn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.consultation-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.catalog-btn {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.catalog-btn:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links, .header-actions {
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .navbar {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Üniversite Logoları Slider Section */
+.universities-section {
+    background: #ffffff;
+    padding: 0;
+    text-align: center;
+}
+
+.content-section {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.universities-slider-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.universities-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    animation: slideUniversities 8s linear infinite;
+    gap: 3rem;
+    align-items: center;
+}
+
+.university-logo {
+    flex: 0 0 250px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.university-logo:hover {
+    transform: translateY(-5px);
+}
+
+.university-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes slideUniversities {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Daha Fazla Üniversite Keşfet Butonu */
+.discover-more-section {
+    flex: 0 0 auto;
+}
+
+/* Üniversite Keşfet Butonu - Güçlü Override */
+.avdiscoverbtn,
+body .avdiscoverbtn,
+html body .avdiscoverbtn,
+.discover-more-section .avdiscoverbtn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    padding: 1.2rem 2rem !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avdiscoverbtn::before,
+body .avdiscoverbtn::before,
+html body .avdiscoverbtn::before,
+.discover-more-section .avdiscoverbtn::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+    transition: left 0.5s ease !important;
+}
+
+.avdiscoverbtn:hover::before,
+body .avdiscoverbtn:hover::before,
+html body .avdiscoverbtn:hover::before,
+.discover-more-section .avdiscoverbtn:hover::before {
+    left: 100% !important;
+}
+
+.avdiscoverbtn:hover,
+body .avdiscoverbtn:hover,
+html body .avdiscoverbtn:hover,
+.discover-more-section .avdiscoverbtn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4) !important;
+}
+
+.avdiscoverbtn i,
+body .avdiscoverbtn i,
+html body .avdiscoverbtn i,
+.discover-more-section .avdiscoverbtn i {
+    font-size: 1.1rem !important;
+    transition: transform 0.3s ease !important;
+}
+
+.avdiscoverbtn:hover i:last-child,
+body .avdiscoverbtn:hover i:last-child,
+html body .avdiscoverbtn:hover i:last-child,
+.discover-more-section .avdiscoverbtn:hover i:last-child {
+    transform: translateX(5px) !important;
+}
+
+.avdiscoverbtn span,
+body .avdiscoverbtn span,
+html body .avdiscoverbtn span,
+.discover-more-section .avdiscoverbtn span {
+    font-weight: 700 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .universities-section {
+        padding: 2rem 1rem;
+    }
+    
+    .content-section {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0;
+    }
+    
+    .universities-slider-container {
+        overflow: hidden;
+    }
+    
+    .slider-track {
+        gap: 1rem;
+        animation: slideUniversities 30s linear infinite; /* Daha yavaş */
+    }
+    
+    .university-logo {
+        flex: 0 0 150px;
+        height: 100px;
+        padding: 0.5rem;
+        min-width: 150px;
+    }
+    
+    .university-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .discover-more-section {
+        margin-top: 1rem;
+    }
+    
+    .avdiscoverbtn {
+        padding: 1rem 1.5rem;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 76vh;
+    overflow: hidden;
+    margin-top: 80px; /* Header için boşluk */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+/* Sol Kısım */
+.hero-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.students-image {
+    position: relative;
+    bottom: 0;
+    left: -80px;
+    transform: scale(1.1);
+    transform-origin: bottom left;
+    margin-bottom: 0;
+}
+
+.students-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sol resmin üstündeki yazı */
+.students-quote {
+    position: absolute;
+    top: 0.2rem;
+    left: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 380px;
+    min-height: 50px;
+    z-index: 10;
+    animation: floatQuote 3s ease-in-out infinite;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.students-quote::before {
+    content: '"';
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    font-size: 3rem;
+    color: #ffd700;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+.students-quote::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px;
+    right: 15px;
+    font-size: 3rem;
+    color: #ffd700;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+.students-quote p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+    font-style: italic;
+}
+
+@keyframes floatQuote {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Orta Kısım */
+.hero-center {
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Bayraklar Slider */
+.flags-slider {
+    margin-bottom: 2rem;
+    overflow: hidden;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+    position: relative;
+}
+
+.flags-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        transparent 10%, 
+        transparent 90%, 
+        rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.flags-container {
+    display: flex;
+    animation: slideFlags 15s linear infinite;
+    gap: 1.2rem;
+    align-items: center;
+    width: calc(9 * 45px + 8 * 1.2rem); /* 9 bayrak + 8 gap */
+}
+
+.flag {
+    width: 45px;
+    height: 32px;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+@keyframes slideFlags {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(calc(-50% - 1.5rem)); /* Yarıya kadar kaydır + gap */
+    }
+}
+
+@keyframes slideBadges {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideProcessFeatures {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideBadgesHorizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideFeaturesHorizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Başarı Badge'leri */
+.success-badges {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-badge {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.guarantee-badge {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Ana Başlık */
+.main-title {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.3px;
+}
+
+.changing-text {
+    color: #ffd700;
+    font-weight: 800;
+    border-right: 3px solid #ffd700;
+    animation: blink 1s infinite;
+    padding-right: 6px;
+    text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+}
+
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: #ffd700; }
+}
+
+/* Butonlar - Güçlü Override */
+.avherobtns,
+body .avherobtns,
+html body .avherobtns,
+.hero .avherobtns,
+.hero-center .avherobtns {
+    display: flex !important;
+    gap: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.avherobtns .btn,
+body .avherobtns .btn,
+html body .avherobtns .btn,
+.hero .avherobtns .btn,
+.hero-center .avherobtns .btn {
+    padding: 1rem 2rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.avherobtns .btn-primary,
+body .avherobtns .btn-primary,
+html body .avherobtns .btn-primary,
+.hero .avherobtns .btn-primary,
+.hero-center .avherobtns .btn-primary {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%) !important;
+    color: #333 !important;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+.avherobtns .btn-secondary,
+body .avherobtns .btn-secondary,
+html body .avherobtns .btn-secondary,
+.hero .avherobtns .btn-secondary,
+.hero-center .avherobtns .btn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+    font-weight: 600 !important;
+}
+
+.avherobtns .btn-primary:hover,
+body .avherobtns .btn-primary:hover,
+html body .avherobtns .btn-primary:hover,
+.hero .avherobtns .btn-primary:hover,
+.hero-center .avherobtns .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.5) !important;
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%) !important;
+}
+
+.avherobtns .btn-secondary:hover,
+body .avherobtns .btn-secondary:hover,
+html body .avherobtns .btn-secondary:hover,
+.hero .avherobtns .btn-secondary:hover,
+.hero-center .avherobtns .btn-secondary:hover {
+    background: white !important;
+    color: #667eea !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Özellikler */
+.features {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.1rem;
+}
+
+/* Yorumlar */
+.reviews-slider {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.reviews-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 1rem;
+}
+
+.review {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    flex: 0 0 280px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.review::before {
+    content: '"';
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    font-size: 3rem;
+    color: #ffd700;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.reviewer-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+}
+
+.reviewer-info {
+    flex: 1;
+}
+
+.reviewer-name {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+.review-date {
+    font-size: 0.7rem;
+    color: #718096;
+}
+
+.stars {
+    color: #ffd700;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.review p {
+    font-size: 0.8rem;
+    color: #4a5568;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 0;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Slider Navigation */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.slider-dot.active {
+    background: #ffd700;
+    transform: scale(1.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.slider-dot:hover {
+    background: rgba(255, 215, 0, 0.7);
+    transform: scale(1.2);
+}
+
+/* Sağ Kısım - Form */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.contact-form,
+body .contact-form,
+html body .contact-form,
+.hero-right .contact-form,
+.elementor-widget-container .contact-form,
+.elementor-element .contact-form {
+    background: white !important;
+    padding: 2.5rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.contact-form h3,
+body .contact-form h3,
+html body .contact-form h3,
+.hero-right .contact-form h3,
+.elementor-widget-container .contact-form h3,
+.elementor-element .contact-form h3 {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    color: #2d3748 !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.form-group,
+body .form-group,
+html body .form-group,
+.contact-form .form-group,
+.elementor-widget-container .form-group,
+.elementor-element .form-group {
+    margin-bottom: 1.5rem !important;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+body .form-group input,
+body .form-group select,
+body .form-group textarea,
+html body .form-group input,
+html body .form-group select,
+html body .form-group textarea,
+.contact-form .form-group input,
+.contact-form .form-group select,
+.contact-form .form-group textarea,
+.elementor-widget-container .form-group input,
+.elementor-widget-container .form-group select,
+.elementor-widget-container .form-group textarea,
+.elementor-element .form-group input,
+.elementor-element .form-group select,
+.elementor-element .form-group textarea {
+    width: 100% !important;
+    padding: 1rem !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    background: #f7fafc !important;
+    box-sizing: border-box !important;
+    color: #333 !important;
+    font-family: inherit !important;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+body .form-group input:focus,
+body .form-group select:focus,
+body .form-group textarea:focus,
+html body .form-group input:focus,
+html body .form-group select:focus,
+html body .form-group textarea:focus,
+.contact-form .form-group input:focus,
+.contact-form .form-group select:focus,
+.contact-form .form-group textarea:focus,
+.elementor-widget-container .form-group input:focus,
+.elementor-widget-container .form-group select:focus,
+.elementor-widget-container .form-group textarea:focus,
+.elementor-element .form-group input:focus,
+.elementor-element .form-group select:focus,
+.elementor-element .form-group textarea:focus {
+    outline: none !important;
+    border-color: #667eea !important;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+    background: white !important;
+}
+
+.form-group textarea,
+body .form-group textarea,
+html body .form-group textarea,
+.contact-form .form-group textarea,
+.elementor-widget-container .form-group textarea,
+.elementor-element .form-group textarea {
+    height: 80px !important;
+    resize: vertical !important;
+    min-height: 80px !important;
+    max-height: 120px !important;
+}
+
+/* Select Box Özel Stilleri */
+.form-group select,
+body .form-group select,
+html body .form-group select,
+.contact-form .form-group select,
+.elementor-widget-container .form-group select,
+.elementor-element .form-group select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 1rem center !important;
+    background-size: 1em !important;
+    padding-right: 2.5rem !important;
+    cursor: pointer !important;
+}
+
+.form-group select option,
+body .form-group select option,
+html body .form-group select option,
+.contact-form .form-group select option,
+.elementor-widget-container .form-group select option,
+.elementor-element .form-group select option {
+    color: #333 !important;
+    background: white !important;
+    padding: 0.5rem !important;
+}
+
+/* Form Submit Butonu - Güçlü Override */
+.avsubmitbtn,
+body .avsubmitbtn,
+html body .avsubmitbtn,
+.contact-form .avsubmitbtn,
+.hero-right .avsubmitbtn {
+    width: 100% !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: white !important;
+    padding: 1.2rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-decoration: none !important;
+    display: block !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avsubmitbtn:hover,
+body .avsubmitbtn:hover,
+html body .avsubmitbtn:hover,
+.contact-form .avsubmitbtn:hover,
+.hero-right .avsubmitbtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        min-height: auto;
+        padding-top: 2rem;
+        height: auto;
+    }
+    
+    .hero-left {
+        display: none;
+    }
+    
+    .hero-center {
+        flex: 1;
+        padding: 1.5rem;
+        margin: 0;
+        width: 100%;
+        order: 1;
+    }
+    
+    .flags-slider {
+        height: 30px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+    
+    .flags-container {
+        gap: 0.5rem;
+        animation: slideFlags 20s linear infinite; /* Daha yavaş */
+        width: calc(18 * 35px + 17 * 0.5rem); /* 18 bayrak */
+    }
+    
+    .flag {
+        width: 35px;
+        height: 25px;
+        min-width: 35px; /* Bayrakların kaybolmasını önle */
+    }
+    
+    .success-badges {
+        display: none;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+    }
+    
+    .changing-text {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .feature {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        text-align: center;
+        flex: 1;
+    }
+    
+    .avherobtns {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .avherobtns .btn,
+    .avherobtns .btn-primary,
+    .avherobtns .btn-secondary,
+    body .avherobtns .btn,
+    html body .avherobtns .btn,
+    .hero .avherobtns .btn,
+    .hero-center .avherobtns .btn {
+        width: 100% !important;
+        padding: 1rem 1rem !important;
+        font-size: 0.9rem !important;
+        min-height: auto !important;
+        height: auto !important;
+        border-radius: 8px !important;
+        line-height: 1.3 !important;
+        letter-spacing: 0.2px !important;
+        text-transform: none !important;
+        font-weight: 600 !important;
+    }
+    
+    .hero-right {
+        width: 100%;
+        order: 2;
+        margin-top: 0;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-form,
+    body .contact-form,
+    html body .contact-form,
+    .hero-right .contact-form,
+    .elementor-widget-container .contact-form,
+    .elementor-element .contact-form {
+        padding: 2rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        margin-bottom: 2rem !important;
+        order: 2 !important;
+    }
+    
+    .contact-form h3,
+    body .contact-form h3,
+    html body .contact-form h3,
+    .hero-right .contact-form h3,
+    .elementor-widget-container .contact-form h3,
+    .elementor-element .contact-form h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .form-group,
+    body .form-group,
+    html body .form-group,
+    .contact-form .form-group,
+    .elementor-widget-container .form-group,
+    .elementor-element .form-group {
+        margin-bottom: 1rem !important;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    body .form-group input,
+    body .form-group select,
+    body .form-group textarea,
+    html body .form-group input,
+    html body .form-group select,
+    html body .form-group textarea,
+    .contact-form .form-group input,
+    .contact-form .form-group select,
+    .contact-form .form-group textarea,
+    .elementor-widget-container .form-group input,
+    .elementor-widget-container .form-group select,
+    .elementor-widget-container .form-group textarea,
+    .elementor-element .form-group input,
+    .elementor-element .form-group select,
+    .elementor-element .form-group textarea {
+        padding: 0.8rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Mobilde textarea küçültme */
+    .form-group textarea,
+    body .form-group textarea,
+    html body .form-group textarea,
+    .contact-form .form-group textarea,
+    .elementor-widget-container .form-group textarea,
+    .elementor-element .form-group textarea {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 80px !important;
+    }
+    
+    .avsubmitbtn,
+    body .avsubmitbtn,
+    html body .avsubmitbtn,
+    .contact-form .avsubmitbtn,
+    .hero-right .avsubmitbtn,
+    .elementor-widget-container .avsubmitbtn,
+    .elementor-element .avsubmitbtn {
+        width: 100% !important;
+        padding: 1rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* Programları Kategorilerini Keşfet Section */
+.programs-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 6rem 4rem;
+    position: relative;
+}
+
+.programs-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.program-row {
+    display: flex;
+    gap: 2rem;
+    height: 350px;
+}
+
+/* Program Item */
+.program-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.program-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Program Genişlikleri */
+.program-small {
+    flex: 1;
+    min-width: 300px;
+}
+
+.program-medium {
+    flex: 1.5;
+    min-width: 400px;
+}
+
+.program-large {
+    flex: 2;
+    min-width: 500px;
+}
+
+/* Program Overlay */
+.program-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.6) 0%, rgba(30, 74, 122, 0.8) 100%);
+    transition: all 0.3s ease;
+}
+
+.program-overlay.featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.program-item:hover .program-overlay {
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.5) 0%, rgba(30, 74, 122, 0.7) 100%);
+}
+
+.program-item.featured:hover .program-overlay {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Program Content */
+.program-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+/* Program Icon */
+.program-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.program-item:hover .program-icon {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%);
+    box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Program Content */
+.program-item h3 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.program-item p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Program Meta */
+.program-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.program-meta span {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.program-meta span:nth-child(even) {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 237, 78, 0.8) 100%);
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.program-item:hover .program-meta span {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%);
+    transform: translateY(-2px);
+}
+
+.program-item:hover .program-meta span:nth-child(even) {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 1) 0%, rgba(255, 237, 78, 1) 100%);
+    transform: translateY(-2px);
+}
+
+/* Program Stats */
+.program-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1.2rem;
+    gap: 0.8rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    color: white;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.stat span {
+    font-size: 0.75rem;
+    opacity: 0.95;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Program Link */
+.program-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.9) 0%, rgba(255, 237, 78, 0.9) 100%);
+    padding: 0.7rem 1.3rem;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.program-link:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 1) 0%, rgba(255, 237, 78, 1) 100%);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: #333;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+.program-link i {
+    transition: transform 0.3s ease;
+}
+
+.program-link:hover i {
+    transform: translateX(3px);
+}
+
+.program-link.featured {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white !important;
+}
+
+.program-link.featured:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.3) 100%);
+    border-color: rgba(255, 255, 255, 0.7);
+    color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .program-row {
+        flex-direction: column;
+        height: auto;
+        gap: 1.5rem;
+    }
+    
+    .program-small,
+    .program-medium,
+    .program-large {
+        flex: none;
+        min-width: auto;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-section {
+        padding: 3rem 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .programs-grid {
+        gap: 1rem;
+    }
+    
+    .program-row {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+    }
+    
+    .program-item {
+        height: 380px;
+        padding: 1.2rem;
+        min-width: auto;
+    }
+    
+    .program-content {
+        padding: 0.8rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.3rem;
+    }
+    
+    .program-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .program-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+    
+    .program-item p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        flex-grow: 1;
+    }
+    
+    .program-meta {
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .program-meta span {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .program-stats {
+        flex-direction: row;
+        gap: 0.3rem;
+        margin-bottom: 0.8rem;
+        justify-content: space-between;
+    }
+    
+    .stat {
+        text-align: center;
+        flex: 1;
+    }
+    
+    .stat strong {
+        font-size: 1rem;
+        display: block;
+    }
+    
+    .stat span {
+        font-size: 0.65rem;
+        display: block;
+    }
+    
+    .program-link {
+        font-size: 0.85rem;
+        padding: 0.7rem 1rem;
+        margin-top: auto;
+        text-align: center;
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #333;
+        border-radius: 8px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    }
+    
+    .container {
+        padding: 0;
+    }
+}
+
+/* Header Altı Grid Kartı */
+.header-grid-section {
+    background: #ffffff;
+    padding: 0;
+    position: relative;
+}
+
+.header-grid-card {
+    position: relative;
+    height: 280px;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.header-grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.header-grid-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.header-grid-card .card-content {
+    color: white;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header-grid-card .card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.header-grid-card .card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-grid-card .card-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-grid-card {
+        height: 200px;
+        padding: 1.5rem;
+    }
+    
+    .header-grid-card .card-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .header-grid-card .card-content p {
+        font-size: 1rem;
+    }
+    
+    .header-grid-card .card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Header kartı özel stili */
+.header-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border-radius: 15px;
+}
+
+.header-card::before {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.header-card .card-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.header-card .card-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.header-card .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Yeni Süreç Section */
+.process-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.process-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.process-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.process-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.7) 0%, rgba(38, 97, 149, 0.8) 100%);
+}
+
+.process-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sol Kısım - İçerik */
+.process-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 3rem;
+}
+
+.process-content {
+    color: white;
+    max-width: 600px;
+}
+
+/* Süreç Badge */
+.process-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.process-badge i {
+    font-size: 1.1rem;
+}
+
+/* Ana Başlık */
+.process-title {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.5px;
+}
+
+.highlight-text {
+    color: #ffd700;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(255, 215, 0, 0.4);
+}
+
+/* Açıklama */
+.process-description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Özellikler */
+.process-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.process-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.process-feature:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* Süreç Butonları - Güçlü Override */
+.avprocessbtns,
+body .avprocessbtns,
+html body .avprocessbtns,
+.process-left .avprocessbtns,
+.process-content .avprocessbtns {
+    display: flex !important;
+    gap: 1.5rem !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.avprocessbtn,
+body .avprocessbtn,
+html body .avprocessbtn,
+.process-left .avprocessbtn,
+.process-content .avprocessbtn {
+    padding: 0.9rem 2.5rem !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avprocessbtn-primary,
+body .avprocessbtn-primary,
+html body .avprocessbtn-primary,
+.process-left .avprocessbtn-primary,
+.process-content .avprocessbtn-primary {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%) !important;
+    color: #333 !important;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4) !important;
+}
+
+.avprocessbtn-secondary,
+body .avprocessbtn-secondary,
+html body .avprocessbtn-secondary,
+.process-left .avprocessbtn-secondary,
+.process-content .avprocessbtn-secondary {
+    background: transparent !important;
+    color: white !important;
+    border: 2px solid white !important;
+    font-weight: 600 !important;
+}
+
+.avprocessbtn-primary:hover,
+body .avprocessbtn-primary:hover,
+html body .avprocessbtn-primary:hover,
+.process-left .avprocessbtn-primary:hover,
+.process-content .avprocessbtn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5) !important;
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%) !important;
+}
+
+.avprocessbtn-secondary:hover,
+body .avprocessbtn-secondary:hover,
+html body .avprocessbtn-secondary:hover,
+.process-left .avprocessbtn-secondary:hover,
+.process-content .avprocessbtn-secondary:hover {
+    background: white !important;
+    color: #266195 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Sağ Kısım - Video */
+.process-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    background: #000;
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: all 0.3s ease;
+}
+
+.video-container:hover {
+    transform: perspective(1000px) rotateY(0deg) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    padding: 2rem;
+}
+
+.video-overlay:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.play-button {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #266195;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1.5rem;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-info {
+    text-align: center;
+    color: white;
+}
+
+.video-info h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-info p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .process-container {
+        padding: 0 1.5rem;
+    }
+    
+    .process-title {
+        font-size: 3rem;
+    }
+    
+    .process-description {
+        font-size: 1.2rem;
+    }
+    
+    .video-container {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .process-section {
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 0;
+    }
+    
+    .process-container {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2rem;
+    }
+    
+    .process-left {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    .process-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .avprocessbtns {
+        justify-content: center !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .video-container {
+        max-width: 100%;
+        transform: none;
+    }
+    
+    .video-container:hover {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 768px) {
+    .process-section {
+        padding: 3rem 1rem;
+        height: auto;
+        min-height: auto;
+        background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    }
+    
+    .process-container {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .process-left {
+        padding-right: 0;
+        text-align: center;
+        order: 1;
+    }
+    
+    .process-badge {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+    
+    .process-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+    
+    .process-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        opacity: 0.9;
+    }
+    
+    .process-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        animation: none;
+    }
+    
+    .process-feature {
+        font-size: 0.85rem;
+        padding: 0.8rem 0.6rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        white-space: normal;
+        animation: none;
+    }
+    
+    .process-feature:nth-child(2),
+    .process-feature:nth-child(3),
+    .process-feature:nth-child(4) {
+        animation: none;
+    }
+    
+    .avprocessbtns {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .avprocessbtn {
+        width: 100% !important;
+        padding: 0.9rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        border-radius: 10px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.5rem !important;
+    }
+    
+    .avprocessbtn-primary {
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%) !important;
+        color: #333 !important;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+    }
+    
+    .avprocessbtn-secondary {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    
+    .process-right {
+        order: 2;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    
+    .video-container {
+        max-width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .video-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .video-wrapper iframe {
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+    }
+    
+    .play-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .video-info h4 {
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 0;
+    }
+}
+
+/* Ücretsiz Görüşme Banner Section */
+.consultation-banner-section {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.consultation-banner-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hareket Eden Resimler */
+.floating-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-image {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: floatUpDown 6s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.floating-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Resim pozisyonları */
+.floating-image:nth-child(1) {
+    top: 15%;
+    left: 8%;
+    animation-duration: 8s;
+}
+
+.floating-image:nth-child(2) {
+    top: 25%;
+    right: 12%;
+    animation-duration: 7s;
+}
+
+.floating-image:nth-child(3) {
+    bottom: 25%;
+    left: 8%;
+    animation-duration: 9s;
+}
+
+.floating-image:nth-child(4) {
+    bottom: 15%;
+    right: 8%;
+    animation-duration: 6.5s;
+}
+
+.floating-image:nth-child(5) {
+    top: 45%;
+    right: 15%;
+    animation-duration: 7.5s;
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Hover efektleri */
+.floating-image:hover {
+    transform: scale(1.2);
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4);
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.banner-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    z-index: 3;
+}
+
+.banner-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem auto;
+    font-size: 2rem;
+    color: #ffd700;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Banner İçerik Yazıları - Güçlü Override */
+.banner-content h2,
+body .banner-content h2,
+html body .banner-content h2,
+.consultation-banner-section .banner-content h2 {
+    font-size: 3rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1.5rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+}
+
+.banner-content p,
+body .banner-content p,
+html body .banner-content p,
+.consultation-banner-section .banner-content p {
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2.5rem !important;
+    opacity: 0.95 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+}
+
+.banner-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.banner-features .feature,
+body .banner-features .feature,
+html body .banner-features .feature,
+.consultation-banner-section .banner-features .feature {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    padding: 1rem 1.5rem !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+    font-weight: 500 !important;
+    color: white !important;
+}
+
+.banner-features .feature:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.banner-features .feature i {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+/* Banner Butonu - Güçlü Override */
+.avbannerbtn,
+body .avbannerbtn,
+html body .avbannerbtn,
+.consultation-banner-section .avbannerbtn,
+.banner-content .avbannerbtn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%) !important;
+    color: #333 !important;
+    border: none !important;
+    padding: 1.2rem 3rem !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avbannerbtn::before,
+body .avbannerbtn::before,
+html body .avbannerbtn::before,
+.consultation-banner-section .avbannerbtn::before,
+.banner-content .avbannerbtn::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+    transition: left 0.5s ease !important;
+}
+
+.avbannerbtn:hover::before,
+body .avbannerbtn:hover::before,
+html body .avbannerbtn:hover::before,
+.consultation-banner-section .avbannerbtn:hover::before,
+.banner-content .avbannerbtn:hover::before {
+    left: 100% !important;
+}
+
+.avbannerbtn:hover,
+body .avbannerbtn:hover,
+html body .avbannerbtn:hover,
+.consultation-banner-section .avbannerbtn:hover,
+.banner-content .avbannerbtn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5) !important;
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%) !important;
+}
+
+.avbannerbtn i:first-child,
+body .avbannerbtn i:first-child,
+html body .avbannerbtn i:first-child,
+.consultation-banner-section .avbannerbtn i:first-child,
+.banner-content .avbannerbtn i:first-child {
+    font-size: 1.3rem !important;
+}
+
+.avbannerbtn i:last-child,
+body .avbannerbtn i:last-child,
+html body .avbannerbtn i:last-child,
+.consultation-banner-section .avbannerbtn i:last-child,
+.banner-content .avbannerbtn i:last-child {
+    font-size: 1rem !important;
+    transition: transform 0.3s ease !important;
+}
+
+.avbannerbtn:hover i:last-child,
+body .avbannerbtn:hover i:last-child,
+html body .avbannerbtn:hover i:last-child,
+.consultation-banner-section .avbannerbtn:hover i:last-child,
+.banner-content .avbannerbtn:hover i:last-child {
+    transform: translateX(5px) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .consultation-banner-section {
+        padding: 3rem 0;
+    }
+    
+    .banner-container {
+        padding: 0 1rem;
+    }
+    
+    .banner-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .banner-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .banner-features {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .banner-features .feature {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .banner-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Başarı Hikayeleri Section */
+.success-stories-section {
+    background: #ffffff;
+    padding: 6rem 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Videos Container */
+.videos-container {
+    margin-bottom: 3rem;
+}
+
+/* Videos Slider */
+.videos-slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.videos-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 3rem;
+}
+
+.video-item {
+    position: relative;
+    width: calc(50% - 1.5rem);
+    flex-shrink: 0;
+    height: 300px;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Slider Navigation */
+/* Başarı Hikayeleri Slider Butonları - Güçlü Override */
+.avslidernav,
+body .avslidernav,
+html body .avslidernav,
+.success-stories-section .avslidernav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+}
+
+.avsliderbtn,
+body .avsliderbtn,
+html body .avsliderbtn,
+.success-stories-section .avsliderbtn,
+.avslidernav .avsliderbtn {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%) !important;
+    color: white !important;
+    border: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 5px 15px rgba(38, 97, 149, 0.3) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avsliderbtn:hover,
+body .avsliderbtn:hover,
+html body .avsliderbtn:hover,
+.success-stories-section .avsliderbtn:hover,
+.avslidernav .avsliderbtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(38, 97, 149, 0.4) !important;
+}
+
+.avsliderbtn:disabled,
+body .avsliderbtn:disabled,
+html body .avsliderbtn:disabled,
+.success-stories-section .avsliderbtn:disabled,
+.avslidernav .avsliderbtn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #266195;
+    transform: scale(1.2);
+}
+
+/* Stories CTA */
+/* Başarı Hikayeleri CTA Butonu - Güçlü Override */
+.avstoriescta,
+body .avstoriescta,
+html body .avstoriescta,
+.success-stories-section .avstoriescta {
+    text-align: center !important;
+    margin-top: 2rem !important;
+}
+
+.avstoriesbtn,
+body .avstoriesbtn,
+html body .avstoriesbtn,
+.success-stories-section .avstoriesbtn,
+.avstoriescta .avstoriesbtn {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    box-shadow: 0 8px 25px rgba(38, 97, 149, 0.3) !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avstoriesbtn:hover,
+body .avstoriesbtn:hover,
+html body .avstoriesbtn:hover,
+.success-stories-section .avstoriesbtn:hover,
+.avstoriescta .avstoriesbtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 30px rgba(38, 97, 149, 0.4) !important;
+}
+
+.avstoriesbtn i,
+body .avstoriesbtn i,
+html body .avstoriesbtn i,
+.success-stories-section .avstoriesbtn i,
+.avstoriescta .avstoriesbtn i {
+    font-size: 1.1rem !important;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .video-item {
+        width: calc(50% - 1.5rem);
+        padding-bottom: 28.125%;
+    }
+    
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-item {
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+    
+    .videos-track {
+        gap: 2rem;
+    }
+    
+    .slider-nav {
+        gap: 1rem;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .success-stories-section {
+        padding: 4rem 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .video-info {
+        padding: 1rem;
+    }
+    
+    .video-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .stories-cta {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cta-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+.floating-card {
+    padding: 1.5rem;
+}
+
+/* Hakkımızda Section */
+.about-combined-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-combined-section .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23266195" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Sol Kısım - Yazı */
+.about-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 25px rgba(38, 97, 149, 0.3);
+}
+
+.about-badge i {
+    font-size: 1.1rem;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.title-line {
+    display: block;
+}
+
+.title-line.highlight {
+    color: #266195;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-desc {
+    font-size: 1.2rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Sağ Kısım - Ekip Slider */
+.team-photos-slider {
+    flex: 1;
+    max-width: 700px;
+}
+
+.team-slider-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.team-slider-track {
+    display: flex;
+    gap: 3rem;
+    transition: transform 0.5s ease;
+}
+
+.team-photo-item {
+    flex: 0 0 350px;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-photo-item:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+/* Slider Kontrolleri */
+/* Ekip Slider Butonları - Güçlü Override */
+.avteamslidercontrols,
+body .avteamslidercontrols,
+html body .avteamslidercontrols,
+.about-combined-section .avteamslidercontrols {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+}
+
+.avteamsliderbtn,
+body .avteamsliderbtn,
+html body .avteamsliderbtn,
+.about-combined-section .avteamsliderbtn,
+.avteamslidercontrols .avteamsliderbtn {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%) !important;
+    color: white !important;
+    border: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 5px 15px rgba(38, 97, 149, 0.3) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avteamsliderbtn:hover,
+body .avteamsliderbtn:hover,
+html body .avteamsliderbtn:hover,
+.about-combined-section .avteamsliderbtn:hover,
+.avteamslidercontrols .avteamsliderbtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(38, 97, 149, 0.4) !important;
+}
+
+.avteamsliderbtn:disabled,
+body .avteamsliderbtn:disabled,
+html body .avteamsliderbtn:disabled,
+.about-combined-section .avteamsliderbtn:disabled,
+.avteamslidercontrols .avteamsliderbtn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.team-slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.team-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.team-dot.active {
+    background: #266195;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .about-flex {
+        gap: 3rem;
+        padding: 0 1.5rem;
+    }
+    
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .team-photo-item {
+        flex: 0 0 300px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-combined-section {
+        padding: 4rem 0;
+    }
+    
+    .about-flex {
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .about-info {
+        max-width: 100%;
+    }
+    
+    .about-title {
+        font-size: 2.2rem;
+    }
+    
+    .about-desc {
+        font-size: 1.1rem;
+    }
+    
+    .team-photo-item {
+        flex: 0 0 280px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-combined-section {
+        padding: 3rem 0;
+    }
+    
+    .about-flex {
+        padding: 0 1rem;
+        gap: 2rem;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-desc {
+        font-size: 1rem;
+    }
+    
+    .team-slider-container {
+        padding: 1.5rem;
+    }
+    
+    .team-photo-item {
+        flex: 0 0 250px;
+        height: 350px;
+    }
+    
+    .team-slider-track {
+        gap: 2rem;
+    }
+    
+    .team-slider-controls {
+        gap: 1rem;
+    }
+    
+    .team-slider-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* SSS Section */
+.faq-section {
+    background: #ffffff;
+    padding: 6rem 0;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem;
+}
+
+.faq-header h2 {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.faq-header p {
+    font-size: 1.2rem;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.faq-item,
+body .faq-item,
+html body .faq-item,
+.faq-section .faq-item {
+    background: white !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid #e2e8f0 !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.faq-item:hover,
+body .faq-item:hover,
+html body .faq-item:hover,
+.faq-section .faq-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* FAQ Soru Butonları - Güçlü Override */
+.faq-question,
+body .faq-question,
+html body .faq-question,
+.faq-section .faq-question,
+.faq-item .faq-question {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 1.5rem 2rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    background: #f8fafc !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.faq-question:hover,
+body .faq-question:hover,
+html body .faq-question:hover,
+.faq-section .faq-question:hover,
+.faq-item .faq-question:hover {
+    background: #edf2f7 !important;
+}
+
+.faq-question h3,
+body .faq-question h3,
+html body .faq-question h3,
+.faq-section .faq-question h3,
+.faq-item .faq-question h3 {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #1a202c !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+    pointer-events: none !important;
+}
+
+.faq-icon,
+body .faq-icon,
+html body .faq-icon,
+.faq-section .faq-icon,
+.faq-item .faq-icon {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    flex-shrink: 0 !important;
+    pointer-events: none !important;
+}
+
+.faq-item.active .faq-icon,
+body .faq-item.active .faq-icon,
+html body .faq-item.active .faq-icon,
+.faq-section .faq-item.active .faq-icon {
+    transform: rotate(45deg) !important;
+}
+
+.faq-answer,
+body .faq-answer,
+html body .faq-answer,
+.faq-section .faq-answer,
+.faq-item .faq-answer {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.3s ease !important;
+    background: white !important;
+}
+
+.faq-item.active .faq-answer,
+body .faq-item.active .faq-answer,
+html body .faq-item.active .faq-answer,
+.faq-section .faq-item.active .faq-answer {
+    max-height: 200px !important;
+}
+
+.faq-answer p,
+body .faq-answer p,
+html body .faq-answer p,
+.faq-section .faq-answer p,
+.faq-item .faq-answer p {
+    padding: 0 2rem 1.5rem 2rem !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    color: #4a5568 !important;
+    line-height: 1.6 !important;
+}
+
+/* FAQ CTA */
+.faq-cta {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(38, 97, 149, 0.3);
+    width: 400px;
+    flex-shrink: 0;
+}
+
+/* SSS CTA İçerik Yazıları - Güçlü Override */
+.faq-cta-content h3,
+body .faq-cta-content h3,
+html body .faq-cta-content h3,
+.faq-cta .faq-cta-content h3 {
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    color: white !important;
+}
+
+.faq-cta-content p,
+body .faq-cta-content p,
+html body .faq-cta-content p,
+.faq-cta .faq-cta-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2rem !important;
+    opacity: 0.95 !important;
+    color: white !important;
+}
+
+/* SSS CTA Butonu - Güçlü Override */
+.avfaqctabtn,
+body .avfaqctabtn,
+html body .avfaqctabtn,
+.faq-cta .avfaqctabtn,
+.faq-cta-content .avfaqctabtn {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%) !important;
+    color: #333 !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4) !important;
+    text-decoration: none !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avfaqctabtn:hover,
+body .avfaqctabtn:hover,
+html body .avfaqctabtn:hover,
+.faq-cta .avfaqctabtn:hover,
+.faq-cta-content .avfaqctabtn:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 30px rgba(255, 215, 0, 0.5) !important;
+    background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%) !important;
+    color: #333 !important;
+}
+
+.avfaqctabtn i,
+body .avfaqctabtn i,
+html body .avfaqctabtn i,
+.faq-cta .avfaqctabtn i,
+.faq-cta-content .avfaqctabtn i {
+    font-size: 1.1rem !important;
+}
+
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 3rem 1rem;
+    }
+    
+    .faq-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .faq-header p {
+        font-size: 0.9rem;
+    }
+    
+    .faq-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .faq-list {
+        width: 100%;
+        order: 1;
+    }
+    
+    .faq-cta {
+        width: 100%;
+        order: 2;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+    
+    .faq-question {
+        padding: 1rem 1.2rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .faq-answer p {
+        padding: 0 1.2rem 1rem 1.2rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    .faq-cta-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .faq-cta-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .avfaqctabtn {
+        width: 100%;
+        padding: 1rem !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Öğrenci Deneyimleri Section */
+.student-experiences-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.student-experiences-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.student-experiences-section .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.student-experiences-section .section-header h2 {
+    font-size: 3rem;
+    color: #1a202c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.student-experiences-section .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 2px;
+}
+
+.student-experiences-section .section-header p {
+    font-size: 1.2rem;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Experiences Container */
+.experiences-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.experiences-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+    padding: 1rem 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.experiences-track::-webkit-scrollbar {
+    display: none;
+}
+
+.experiences-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Experience Items */
+.experience-item {
+    flex: 0 0 400px;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Video Items */
+.video-item {
+    background: #000;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.video-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+}
+
+/* Student Items - New Simple Design */
+.student-item {
+    position: relative;
+    cursor: pointer;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+
+.student-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.student-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.6s ease;
+}
+
+.student-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10, 25, 40, 0.98) 0%, rgba(5, 15, 25, 0.99) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.6s ease;
+    backdrop-filter: blur(10px);
+}
+
+.student-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.student-item:hover .student-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.student-item:hover .student-image img {
+    filter: blur(3px) brightness(0.4);
+    transform: scale(1.1);
+}
+
+/* Video Items */
+.video-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.play-button-overlay i {
+    font-size: 3rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.video-item:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.video-item:hover .play-button-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.video-item:hover .play-button-overlay i {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.student-comment {
+    text-align: center;
+    color: white;
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.student-comment h4 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+    color: #ffd700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.student-comment p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Slider Navigation */
+/* Öğrenci Deneyimleri Slider Butonları - Güçlü Override */
+.avexperiencesnav,
+body .avexperiencesnav,
+html body .avexperiencesnav,
+.student-experiences-section .avexperiencesnav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+.avexperiencesbtn,
+body .avexperiencesbtn,
+html body .avexperiencesbtn,
+.student-experiences-section .avexperiencesbtn,
+.avexperiencesnav .avexperiencesbtn {
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%) !important;
+    color: white !important;
+    border: none !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 5px 15px rgba(38, 97, 149, 0.3) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    pointer-events: auto !important;
+}
+
+.avexperiencesbtn:hover,
+body .avexperiencesbtn:hover,
+html body .avexperiencesbtn:hover,
+.student-experiences-section .avexperiencesbtn:hover,
+.avexperiencesnav .avexperiencesbtn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(38, 97, 149, 0.4) !important;
+}
+
+.avexperiencesbtn:disabled,
+body .avexperiencesbtn:disabled,
+html body .avexperiencesbtn:disabled,
+.student-experiences-section .avexperiencesbtn:disabled,
+.avexperiencesnav .avexperiencesbtn:disabled {
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+.exp-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.exp-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exp-dot.active {
+    background: #266195;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .experience-item {
+        flex: 0 0 350px;
+        height: 450px;
+    }
+    
+    .student-experiences-section .section-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .experiences-track {
+        gap: 1.5rem;
+    }
+    
+    .experience-item {
+        flex: 0 0 300px;
+        height: 400px;
+    }
+    
+    .student-comment h4 {
+        font-size: 1.2rem;
+    }
+    
+    .student-comment p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .student-experiences-section {
+        padding: 3rem 1rem;
+    }
+    
+    .student-experiences-section .container {
+        padding: 0;
+    }
+    
+    .student-experiences-section .section-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .student-experiences-section .section-header p {
+        font-size: 0.9rem;
+    }
+    
+    .experiences-container {
+        overflow: hidden;
+    }
+    
+    .experiences-track {
+        gap: 1rem;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 0.5rem 0;
+    }
+    
+    .experience-item {
+        flex: 0 0 280px;
+        height: 350px;
+        scroll-snap-align: start;
+        min-width: 280px;
+    }
+    
+    .student-overlay {
+        padding: 1.5rem;
+    }
+    
+    .student-comment h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .student-comment p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .avexperiencesnav {
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .avexperiencesbtn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .exp-dots {
+        gap: 0.5rem;
+    }
+    
+    .exp-dot {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: 5% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+.modal-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .close-modal {
+        top: -35px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.footer-top {
+    padding: 4rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Footer Section */
+.footer-section {
+    position: relative;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #cbd5e0;
+    margin-bottom: 2rem;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(38, 97, 149, 0.3);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(38, 97, 149, 0.4);
+    background: linear-gradient(135deg, #1e4a7a 0%, #266195 100%);
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+/* Footer Title */
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 2px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-links a::before {
+    content: '→';
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #266195;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 20px;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-item i {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, #266195 0%, #1e4a7a 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.contact-item div {
+    flex: 1;
+}
+
+.contact-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.contact-item a,
+.contact-item p {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+.contact-item a:hover {
+    color: white;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem 0;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright p {
+    color: #a0aec0;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-bottom-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-section:first-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 3rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-section:first-child {
+        grid-column: span 1;
+    }
+    
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-title {
+        font-size: 1.2rem;
+    }
+    
+    .footer-description {
+        font-size: 0.95rem;
+    }
+    
+    .contact-item {
+        gap: 0.8rem;
+    }
+    
+    .contact-item i {
+        width: 18px;
+        height: 18px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Elementor Override - Students Quote Strong Tag */
+.students-quote strong,
+.students-quote .elementor-text-editor strong,
+.students-quote p strong,
+.students-quote .elementor-text-editor p strong,
+.students-quote .elementor-widget-text-editor strong,
+.students-quote .elementor-widget-text-editor p strong {
+    font-weight: 700 !important;
+    color: #333 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-style: normal !important;
+}
+
+/* Elementor Override - Students Quote Paragraph */
+.students-quote p,
+.students-quote .elementor-text-editor p,
+.students-quote .elementor-widget-text-editor p {
+    font-size: 1rem !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    font-style: italic !important;
+    font-family: inherit !important;
+}
+
+/* Elementor Override - Students Quote Container */
+.students-quote,
+.students-quote.elementor-widget-text-editor,
+.students-quote .elementor-text-editor {
+    position: absolute !important;
+    top: 0.2rem !important;
+    left: 3rem !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    max-width: 380px !important;
+    min-height: 50px !important;
+    z-index: 10 !important;
+    animation: floatQuote 3s ease-in-out infinite !important;
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* İkon Stilleri - Tema Renkleri */
+.success-badge i,
+.guarantee-badge i,
+.feature-icon i,
+.process-feature .feature-icon i,
+.program-meta i,
+.avherobtns .btn i {
+    margin-right: 8px !important;
+    font-size: 1.1em !important;
+    color: inherit !important;
+    opacity: 0.9 !important;
+}
+
+/* Success Badge İkonları */
+.success-badge i {
+    color: #333 !important;
+}
+
+.guarantee-badge i {
+    color: white !important;
+}
+
+/* Feature İkonları */
+.feature-icon i {
+    color: #ffd700 !important;
+    font-size: 1.2em !important;
+}
+
+/* Process Feature İkonları */
+.process-feature .feature-icon i {
+    color: #ffd700 !important;
+    font-size: 1.1em !important;
+}
+
+/* Program Meta İkonları */
+.program-meta i {
+    color: inherit !important;
+    font-size: 0.9em !important;
+    margin-right: 6px !important;
+}
+
+/* Buton İkonları */
+.avherobtns .btn i {
+    color: inherit !important;
+    font-size: 1em !important;
+    margin-right: 8px !important;
+}
+
+/* Hover Efektleri */
+.feature:hover .feature-icon i,
+.process-feature:hover .feature-icon i {
+    color: #ffed4e !important;
+    transform: scale(1.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Elementor Override - Form Select Box */
+.contact-form select,
+.contact-form .elementor-field select,
+.contact-form .elementor-field-textual select,
+.contact-form .elementor-form-field select,
+.contact-form .elementor-field-type-select select {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 2px solid #e1e5e9 !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    color: #333 !important;
+    background-color: white !important;
+    transition: all 0.3s ease !important;
+    font-family: inherit !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+    background-position: right 12px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 16px !important;
+    padding-right: 40px !important;
+}
+
+.contact-form select:focus,
+.contact-form .elementor-field select:focus,
+.contact-form .elementor-field-textual select:focus,
+.contact-form .elementor-form-field select:focus,
+.contact-form .elementor-field-type-select select:focus {
+    outline: none !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+}
+
+.contact-form select option,
+.contact-form .elementor-field select option,
+.contact-form .elementor-field-textual select option,
+.contact-form .elementor-form-field select option,
+.contact-form .elementor-field-type-select select option {
+    color: #333 !important;
+    background-color: white !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    padding: 8px !important;
+}
+
+/* Elementor Override - Form Select Placeholder */
+.contact-form select option[value=""],
+.contact-form .elementor-field select option[value=""],
+.contact-form .elementor-field-textual select option[value=""],
+.contact-form .elementor-form-field select option[value=""],
+.contact-form .elementor-field-type-select select option[value=""] {
+    color: #6b7280 !important;
+    font-style: italic !important;
+}
+
+/* Ultra Güçlü Select Box Override - Elementor için */
+select,
+.form-group select,
+.contact-form select,
+.contact-form .form-group select,
+.contact-form .elementor-field select,
+.contact-form .elementor-field-textual select,
+.contact-form .elementor-form-field select,
+.contact-form .elementor-field-type-select select,
+.elementor-widget-container select,
+.elementor-element select,
+.elementor-widget-container .form-group select,
+.elementor-element .form-group select,
+body .contact-form select,
+body .contact-form .form-group select,
+html body .contact-form select,
+html body .contact-form .form-group select {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 48px !important;
+    padding: 12px 16px !important;
+    border: 2px solid #e1e5e9 !important;
+    border-radius: 8px !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    color: #333 !important;
+    background-color: white !important;
+    transition: all 0.3s ease !important;
+    font-family: inherit !important;
+    appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e") !important;
+    background-position: right 12px center !important;
+    background-repeat: no-repeat !important;
+    background-size: 16px !important;
+    padding-right: 40px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+/* Ultra Güçlü Select Option Override */
+select option,
+.form-group select option,
+.contact-form select option,
+.contact-form .form-group select option,
+.contact-form .elementor-field select option,
+.contact-form .elementor-field-textual select option,
+.contact-form .elementor-form-field select option,
+.contact-form .elementor-field-type-select select option,
+.elementor-widget-container select option,
+.elementor-element select option,
+.elementor-widget-container .form-group select option,
+.elementor-element .form-group select option,
+body .contact-form select option,
+body .contact-form .form-group select option,
+html body .contact-form select option,
+html body .contact-form .form-group select option {
+    color: #333 !important;
+    background-color: white !important;
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    padding: 8px 12px !important;
+    height: auto !important;
+    min-height: 36px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+/* Ultra Güçlü Select Placeholder Override */
+select option[value=""],
+.form-group select option[value=""],
+.contact-form select option[value=""],
+.contact-form .form-group select option[value=""],
+.contact-form .elementor-field select option[value=""],
+.contact-form .elementor-field-textual select option[value=""],
+.contact-form .elementor-form-field select option[value=""],
+.contact-form .elementor-field-type-select select option[value=""],
+.elementor-widget-container select option[value=""],
+.elementor-element select option[value=""],
+.elementor-widget-container .form-group select option[value=""],
+.elementor-element .form-group select option[value=""],
+body .contact-form select option[value=""],
+body .contact-form .form-group select option[value=""],
+html body .contact-form select option[value=""],
+html body .contact-form .form-group select option[value=""] {
+    color: #6b7280 !important;
+    font-style: italic !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Select Box Focus Override */
+select:focus,
+.form-group select:focus,
+.contact-form select:focus,
+.contact-form .form-group select:focus,
+.contact-form .elementor-field select:focus,
+.contact-form .elementor-field-textual select:focus,
+.contact-form .elementor-form-field select:focus,
+.contact-form .elementor-field-type-select select:focus,
+.elementor-widget-container select:focus,
+.elementor-element select:focus,
+.elementor-widget-container .form-group select:focus,
+.elementor-element .form-group select:focus,
+body .contact-form select:focus,
+body .contact-form .form-group select:focus,
+html body .contact-form select:focus,
+html body .contact-form .form-group select:focus {
+    outline: none !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+    color: #333 !important;
+    background-color: white !important;
+}
+
+/* Elementor Override - Program Cards Hover Fix */
+.program-item,
+.program-item.elementor-widget-container,
+.program-item .elementor-widget-container,
+.elementor-widget-container .program-item,
+.elementor-element .program-item {
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    border: 2px solid transparent !important;
+    will-change: transform, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.program-item:hover,
+.program-item.elementor-widget-container:hover,
+.program-item .elementor-widget-container:hover,
+.elementor-widget-container .program-item:hover,
+.elementor-element .program-item:hover {
+    transform: translateY(-8px) translateZ(0) !important;
+    -webkit-transform: translateY(-8px) translateZ(0) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Program Overlay Fix */
+.program-overlay,
+.program-item .program-overlay,
+.program-item.elementor-widget-container .program-overlay,
+.elementor-widget-container .program-item .program-overlay,
+.elementor-element .program-item .program-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.6) 0%, rgba(30, 74, 122, 0.8) 100%) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    will-change: background !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.program-item:hover .program-overlay,
+.program-item.elementor-widget-container:hover .program-overlay,
+.program-item .elementor-widget-container:hover .program-overlay,
+.elementor-widget-container .program-item:hover .program-overlay,
+.elementor-element .program-item:hover .program-overlay {
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.5) 0%, rgba(30, 74, 122, 0.7) 100%) !important;
+}
+
+/* Program Icon Fix */
+.program-icon,
+.program-item .program-icon,
+.program-item.elementor-widget-container .program-icon,
+.elementor-widget-container .program-item .program-icon,
+.elementor-element .program-item .program-icon {
+    width: 70px !important;
+    height: 70px !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%) !important;
+    border-radius: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 1.2rem !important;
+    color: white !important;
+    font-size: 1.8rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3) !important;
+    will-change: transform, background, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.program-item:hover .program-icon,
+.program-item.elementor-widget-container:hover .program-icon,
+.program-item .elementor-widget-container:hover .program-icon,
+.elementor-widget-container .program-item:hover .program-icon,
+.elementor-element .program-item:hover .program-icon {
+    transform: scale(1.1) translateZ(0) !important;
+    -webkit-transform: scale(1.1) translateZ(0) !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%) !important;
+    box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Program Meta Fix */
+.program-meta span,
+.program-item .program-meta span,
+.program-item.elementor-widget-container .program-meta span,
+.elementor-widget-container .program-item .program-meta span,
+.elementor-element .program-item .program-meta span {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%) !important;
+    color: white !important;
+    padding: 0.3rem 0.6rem !important;
+    border-radius: 15px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    will-change: transform, background !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.program-item:hover .program-meta span,
+.program-item.elementor-widget-container:hover .program-meta span,
+.program-item .elementor-widget-container:hover .program-meta span,
+.elementor-widget-container .program-item:hover .program-meta span,
+.elementor-element .program-item:hover .program-meta span {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%) !important;
+    transform: translateY(-2px) translateZ(0) !important;
+    -webkit-transform: translateY(-2px) translateZ(0) !important;
+}
+
+/* Program Content Fix - Clickable Elements */
+.program-content,
+.program-item .program-content,
+.program-item.elementor-widget-container .program-content,
+.elementor-widget-container .program-item .program-content,
+.elementor-element .program-item .program-content {
+    position: relative !important;
+    z-index: 10 !important;
+    padding: 2rem !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    color: white !important;
+    pointer-events: auto !important;
+}
+
+/* Program Link Fix - Clickable Buttons */
+.program-link,
+.program-item .program-link,
+.program-item.elementor-widget-container .program-link,
+.elementor-widget-container .program-item .program-link,
+.elementor-element .program-item .program-link,
+.program-item a,
+.program-item.elementor-widget-container a,
+.elementor-widget-container .program-item a,
+.elementor-element .program-item a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.9) 0%, rgba(255, 237, 78, 0.9) 100%) !important;
+    padding: 0.7rem 1.3rem !important;
+    border-radius: 12px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    align-self: flex-start !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+    position: relative !important;
+    z-index: 20 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    will-change: transform, background, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+.program-link:hover,
+.program-item .program-link:hover,
+.program-item.elementor-widget-container .program-link:hover,
+.elementor-widget-container .program-item .program-link:hover,
+.elementor-element .program-item .program-link:hover,
+.program-item a:hover,
+.program-item.elementor-widget-container a:hover,
+.elementor-widget-container .program-item a:hover,
+.elementor-element .program-item a:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 1) 0%, rgba(255, 237, 78, 1) 100%) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px) translateZ(0) !important;
+    -webkit-transform: translateY(-2px) translateZ(0) !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+/* Program Overlay Fix - Non-blocking */
+.program-overlay,
+.program-item .program-overlay,
+.program-item.elementor-widget-container .program-overlay,
+.elementor-widget-container .program-item .program-overlay,
+.elementor-element .program-item .program-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(38, 97, 149, 0.6) 0%, rgba(30, 74, 122, 0.8) 100%) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    will-change: background !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* Program Item Container Fix */
+.program-item,
+.program-item.elementor-widget-container,
+.program-item .elementor-widget-container,
+.elementor-widget-container .program-item,
+.elementor-element .program-item {
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    border: 2px solid transparent !important;
+    will-change: transform, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    pointer-events: auto !important;
+}
+
+/* Ultra Güçlü Program Kartları Override - Tüm Elementor Class'ları */
+.program-item,
+.program-item.elementor-widget-container,
+.program-item .elementor-widget-container,
+.program-item .elementor-widget,
+.program-item .elementor-element,
+.program-item .elementor-element-populated,
+.elementor-widget-container .program-item,
+.elementor-widget-container .program-item .elementor-widget,
+.elementor-widget-container .program-item .elementor-element,
+.elementor-widget-container .program-item .elementor-element-populated,
+.elementor-element .program-item,
+.elementor-element .program-item .elementor-widget,
+.elementor-element .program-item .elementor-element,
+.elementor-element .program-item .elementor-element-populated,
+.elementor-element-populated .program-item,
+.elementor-element-populated .program-item .elementor-widget,
+.elementor-element-populated .program-item .elementor-element,
+.elementor-element-populated .program-item .elementor-element-populated,
+body .program-item,
+body .program-item.elementor-widget-container,
+body .program-item .elementor-widget-container,
+html body .program-item,
+html body .program-item.elementor-widget-container,
+html body .program-item .elementor-widget-container {
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    border: 2px solid transparent !important;
+    will-change: transform, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+}
+
+/* Ultra Güçlü Program Hover Override */
+.program-item:hover,
+.program-item.elementor-widget-container:hover,
+.program-item .elementor-widget-container:hover,
+.program-item .elementor-widget:hover,
+.program-item .elementor-element:hover,
+.program-item .elementor-element-populated:hover,
+.elementor-widget-container .program-item:hover,
+.elementor-widget-container .program-item .elementor-widget:hover,
+.elementor-widget-container .program-item .elementor-element:hover,
+.elementor-widget-container .program-item .elementor-element-populated:hover,
+.elementor-element .program-item:hover,
+.elementor-element .program-item .elementor-widget:hover,
+.elementor-element .program-item .elementor-element:hover,
+.elementor-element .program-item .elementor-element-populated:hover,
+.elementor-element-populated .program-item:hover,
+.elementor-element-populated .program-item .elementor-widget:hover,
+.elementor-element-populated .program-item .elementor-element:hover,
+.elementor-element-populated .program-item .elementor-element-populated:hover,
+body .program-item:hover,
+body .program-item.elementor-widget-container:hover,
+body .program-item .elementor-widget-container:hover,
+html body .program-item:hover,
+html body .program-item.elementor-widget-container:hover,
+html body .program-item .elementor-widget-container:hover {
+    transform: translateY(-8px) translateZ(0) !important;
+    -webkit-transform: translateY(-8px) translateZ(0) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Ultra Güçlü Program Link Override */
+.program-link,
+.program-item .program-link,
+.program-item.elementor-widget-container .program-link,
+.program-item .elementor-widget-container .program-link,
+.program-item .elementor-widget .program-link,
+.program-item .elementor-element .program-link,
+.program-item .elementor-element-populated .program-link,
+.elementor-widget-container .program-item .program-link,
+.elementor-widget-container .program-item .elementor-widget .program-link,
+.elementor-widget-container .program-item .elementor-element .program-link,
+.elementor-widget-container .program-item .elementor-element-populated .program-link,
+.elementor-element .program-item .program-link,
+.elementor-element .program-item .elementor-widget .program-link,
+.elementor-element .program-item .elementor-element .program-link,
+.elementor-element .program-item .elementor-element-populated .program-link,
+.elementor-element-populated .program-item .program-link,
+.elementor-element-populated .program-item .elementor-widget .program-link,
+.elementor-element-populated .program-item .elementor-element .program-link,
+.elementor-element-populated .program-item .elementor-element-populated .program-link,
+body .program-item .program-link,
+body .program-item.elementor-widget-container .program-link,
+body .program-item .elementor-widget-container .program-link,
+html body .program-item .program-link,
+html body .program-item.elementor-widget-container .program-link,
+html body .program-item .elementor-widget-container .program-link,
+.program-item a,
+.program-item.elementor-widget-container a,
+.program-item .elementor-widget-container a,
+.program-item .elementor-widget a,
+.program-item .elementor-element a,
+.program-item .elementor-element-populated a,
+.elementor-widget-container .program-item a,
+.elementor-widget-container .program-item .elementor-widget a,
+.elementor-widget-container .program-item .elementor-element a,
+.elementor-widget-container .program-item .elementor-element-populated a,
+.elementor-element .program-item a,
+.elementor-element .program-item .elementor-widget a,
+.elementor-element .program-item .elementor-element a,
+.elementor-element .program-item .elementor-element-populated a,
+.elementor-element-populated .program-item a,
+.elementor-element-populated .program-item .elementor-widget a,
+.elementor-element-populated .program-item .elementor-element a,
+.elementor-element-populated .program-item .elementor-element-populated a,
+body .program-item a,
+body .program-item.elementor-widget-container a,
+body .program-item .elementor-widget-container a,
+html body .program-item a,
+html body .program-item.elementor-widget-container a,
+html body .program-item .elementor-widget-container a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.9) 0%, rgba(255, 237, 78, 0.9) 100%) !important;
+    padding: 0.7rem 1.3rem !important;
+    border-radius: 12px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    align-self: flex-start !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+    position: relative !important;
+    z-index: 999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    will-change: transform, background, box-shadow !important;
+    backface-visibility: hidden !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+/* Ultra Güçlü Program Link Hover Override */
+.program-link:hover,
+.program-item .program-link:hover,
+.program-item.elementor-widget-container .program-link:hover,
+.program-item .elementor-widget-container .program-link:hover,
+.program-item .elementor-widget .program-link:hover,
+.program-item .elementor-element .program-link:hover,
+.program-item .elementor-element-populated .program-link:hover,
+.elementor-widget-container .program-item .program-link:hover,
+.elementor-widget-container .program-item .elementor-widget .program-link:hover,
+.elementor-widget-container .program-item .elementor-element .program-link:hover,
+.elementor-widget-container .program-item .elementor-element-populated .program-link:hover,
+.elementor-element .program-item .program-link:hover,
+.elementor-element .program-item .elementor-widget .program-link:hover,
+.elementor-element .program-item .elementor-element .program-link:hover,
+.elementor-element .program-item .elementor-element-populated .program-link:hover,
+.elementor-element-populated .program-item .program-link:hover,
+.elementor-element-populated .program-item .elementor-widget .program-link:hover,
+.elementor-element-populated .program-item .elementor-element .program-link:hover,
+.elementor-element-populated .program-item .elementor-element-populated .program-link:hover,
+body .program-item .program-link:hover,
+body .program-item.elementor-widget-container .program-link:hover,
+body .program-item .elementor-widget-container .program-link:hover,
+html body .program-item .program-link:hover,
+html body .program-item.elementor-widget-container .program-link:hover,
+html body .program-item .elementor-widget-container .program-link:hover,
+.program-item a:hover,
+.program-item.elementor-widget-container a:hover,
+.program-item .elementor-widget-container a:hover,
+.program-item .elementor-widget a:hover,
+.program-item .elementor-element a:hover,
+.program-item .elementor-element-populated a:hover,
+.elementor-widget-container .program-item a:hover,
+.elementor-widget-container .program-item .elementor-widget a:hover,
+.elementor-widget-container .program-item .elementor-element a:hover,
+.elementor-widget-container .program-item .elementor-element-populated a:hover,
+.elementor-element .program-item a:hover,
+.elementor-element .program-item .elementor-widget a:hover,
+.elementor-element .program-item .elementor-element a:hover,
+.elementor-element .program-item .elementor-element-populated a:hover,
+.elementor-element-populated .program-item a:hover,
+.elementor-element-populated .program-item .elementor-widget a:hover,
+.elementor-element-populated .program-item .elementor-element a:hover,
+.elementor-element-populated .program-item .elementor-element-populated a:hover,
+body .program-item a:hover,
+body .program-item.elementor-widget-container a:hover,
+body .program-item .elementor-widget-container a:hover,
+html body .program-item a:hover,
+html body .program-item.elementor-widget-container a:hover,
+html body .program-item .elementor-widget-container a:hover {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 1) 0%, rgba(255, 237, 78, 1) 100%) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    transform: translateY(-2px) translateZ(0) !important;
+    -webkit-transform: translateY(-2px) translateZ(0) !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4) !important;
+}
+
+/* Featured Program Card Overlay Fix - Mor Renk */
+.program-overlay.featured,
+.program-item.featured .program-overlay,
+.program-item.featured.elementor-widget-container .program-overlay,
+.program-item.featured .elementor-widget-container .program-overlay,
+.program-item.featured .elementor-widget .program-overlay,
+.program-item.featured .elementor-element .program-overlay,
+.program-item.featured .elementor-element-populated .program-overlay,
+.elementor-widget-container .program-item.featured .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-widget .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-element .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-element-populated .program-overlay,
+.elementor-element .program-item.featured .program-overlay,
+.elementor-element .program-item.featured .elementor-widget .program-overlay,
+.elementor-element .program-item.featured .elementor-element .program-overlay,
+.elementor-element .program-item.featured .elementor-element-populated .program-overlay,
+.elementor-element-populated .program-item.featured .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-widget .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-element .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-element-populated .program-overlay,
+body .program-item.featured .program-overlay,
+body .program-item.featured.elementor-widget-container .program-overlay,
+body .program-item.featured .elementor-widget-container .program-overlay,
+html body .program-item.featured .program-overlay,
+html body .program-item.featured.elementor-widget-container .program-overlay,
+html body .program-item.featured .elementor-widget-container .program-overlay {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Featured Program Card Hover Overlay Fix */
+.program-item.featured:hover .program-overlay,
+.program-item.featured.elementor-widget-container:hover .program-overlay,
+.program-item.featured .elementor-widget-container:hover .program-overlay,
+.program-item.featured .elementor-widget:hover .program-overlay,
+.program-item.featured .elementor-element:hover .program-overlay,
+.program-item.featured .elementor-element-populated:hover .program-overlay,
+.elementor-widget-container .program-item.featured:hover .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-widget:hover .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-element:hover .program-overlay,
+.elementor-widget-container .program-item.featured .elementor-element-populated:hover .program-overlay,
+.elementor-element .program-item.featured:hover .program-overlay,
+.elementor-element .program-item.featured .elementor-widget:hover .program-overlay,
+.elementor-element .program-item.featured .elementor-element:hover .program-overlay,
+.elementor-element .program-item.featured .elementor-element-populated:hover .program-overlay,
+.elementor-element-populated .program-item.featured:hover .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-widget:hover .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-element:hover .program-overlay,
+.elementor-element-populated .program-item.featured .elementor-element-populated:hover .program-overlay,
+body .program-item.featured:hover .program-overlay,
+body .program-item.featured.elementor-widget-container:hover .program-overlay,
+body .program-item.featured .elementor-widget-container:hover .program-overlay,
+html body .program-item.featured:hover .program-overlay,
+html body .program-item.featured.elementor-widget-container:hover .program-overlay,
+html body .program-item.featured .elementor-widget-container:hover .program-overlay {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Featured Program Link Fix - Mor Renk */
+.program-link.featured,
+.program-item.featured .program-link,
+.program-item.featured.elementor-widget-container .program-link,
+.program-item.featured .elementor-widget-container .program-link,
+.program-item.featured .elementor-widget .program-link,
+.program-item.featured .elementor-element .program-link,
+.program-item.featured .elementor-element-populated .program-link,
+.elementor-widget-container .program-item.featured .program-link,
+.elementor-widget-container .program-item.featured .elementor-widget .program-link,
+.elementor-widget-container .program-item.featured .elementor-element .program-link,
+.elementor-widget-container .program-item.featured .elementor-element-populated .program-link,
+.elementor-element .program-item.featured .program-link,
+.elementor-element .program-item.featured .elementor-widget .program-link,
+.elementor-element .program-item.featured .elementor-element .program-link,
+.elementor-element .program-item.featured .elementor-element-populated .program-link,
+.elementor-element-populated .program-item.featured .program-link,
+.elementor-element-populated .program-item.featured .elementor-widget .program-link,
+.elementor-element-populated .program-item.featured .elementor-element .program-link,
+.elementor-element-populated .program-item.featured .elementor-element-populated .program-link,
+body .program-item.featured .program-link,
+body .program-item.featured.elementor-widget-container .program-link,
+body .program-item.featured .elementor-widget-container .program-link,
+html body .program-item.featured .program-link,
+html body .program-item.featured.elementor-widget-container .program-link,
+html body .program-item.featured .elementor-widget-container .program-link {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Featured Program Link Hover Fix */
+.program-link.featured:hover,
+.program-item.featured .program-link:hover,
+.program-item.featured.elementor-widget-container .program-link:hover,
+.program-item.featured .elementor-widget-container .program-link:hover,
+.program-item.featured .elementor-widget .program-link:hover,
+.program-item.featured .elementor-element .program-link:hover,
+.program-item.featured .elementor-element-populated .program-link:hover,
+.elementor-widget-container .program-item.featured .program-link:hover,
+.elementor-widget-container .program-item.featured .elementor-widget .program-link:hover,
+.elementor-widget-container .program-item.featured .elementor-element .program-link:hover,
+.elementor-widget-container .program-item.featured .elementor-element-populated .program-link:hover,
+.elementor-element .program-item.featured .program-link:hover,
+.elementor-element .program-item.featured .elementor-widget .program-link:hover,
+.elementor-element .program-item.featured .elementor-element .program-link:hover,
+.elementor-element .program-item.featured .elementor-element-populated .program-link:hover,
+.elementor-element-populated .program-item.featured .program-link:hover,
+.elementor-element-populated .program-item.featured .elementor-widget .program-link:hover,
+.elementor-element-populated .program-item.featured .elementor-element .program-link:hover,
+.elementor-element-populated .program-item.featured .elementor-element-populated .program-link:hover,
+body .program-item.featured .program-link:hover,
+body .program-item.featured.elementor-widget-container .program-link:hover,
+body .program-item.featured .elementor-widget-container .program-link:hover,
+html body .program-item.featured .program-link:hover,
+html body .program-item.featured.elementor-widget-container .program-link:hover,
+html body .program-item.featured .elementor-widget-container .program-link:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
+} 
