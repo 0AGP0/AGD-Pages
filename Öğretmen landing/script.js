@@ -72,9 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Ülke popup modal işlevselliğini başlat
-    initCountryFormModal();
-    
     // Menü düğmeleri
     const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
     const closeMenuButton = document.querySelector('.close-menu');
@@ -203,8 +200,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
                 .then(data => {
                     console.log('Webhook yanıtı:', data);
-                    // Başarılı gönderimden sonra yönlendir
-                    window.location.href = 'https://campusglobal.com.tr/tesekkurler';
+                    // Butonu tekrar aktif et ve metni eski haline getir
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Formu Gönder <i class="fas fa-paper-plane"></i>';
+                    // Başarılı gönderimden sonra popup göster
+                    showSuccessPopup();
+                    // Form alanlarını temizle
+                    clearForm(contactForm);
                 })
                 .catch(error => {
                     console.error('Form gönderim hatası:', error);
@@ -219,6 +221,88 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Her input değiştiğinde hata mesajlarını temizle
         const formInputs = contactForm.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                clearError(input);
+            });
+        });
+    }
+    
+    // Hero form doğrulama ve webhook gönderimi
+    const heroForm = document.querySelector('.hero-right .contact-form form');
+    if (heroForm) {
+        heroForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            const formInputs = heroForm.querySelectorAll('input, select, textarea');
+            
+            formInputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    isValid = false;
+                    showError(input, 'Bu alan zorunludur');
+                } else if (input.type === 'email' && input.value && !isValidEmail(input.value)) {
+                    isValid = false;
+                    showError(input, 'Geçerli bir e-posta adresi giriniz');
+                } else {
+                    clearError(input);
+                }
+            });
+            
+            if (isValid) {
+                // Form verilerini al
+                const formData = new FormData(heroForm);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+
+                // UTM parametrelerini çerezden oku ve ekle
+                const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+                utmParams.forEach(param => {
+                    formObject[param] = getCookie(param) || '';
+                });
+
+                // Butonu devre dışı bırak ve yükleniyor durumunu göster
+                const submitButton = heroForm.querySelector('.avsubmitbtn');
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+
+                // Webhook'a gönder
+                fetch('https://hook.eu2.make.com/k1dkxp5mtefzotojaobz12sa7enkl7al', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formObject)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Webhook gönderimi başarısız oldu.');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Hero form webhook yanıtı:', data);
+                    // Butonu tekrar aktif et ve metni eski haline getir
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<span>Hemen Başvur</span><i class="fas fa-paper-plane" style="margin-left: 10px;"></i>';
+                    // Başarılı gönderimden sonra popup göster
+                    showSuccessPopup();
+                    // Form alanlarını temizle
+                    clearForm(heroForm);
+                })
+                .catch(error => {
+                    console.error('Hero form gönderim hatası:', error);
+                    showError(submitButton, 'Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<span>Hemen Başvur</span><i class="fas fa-paper-plane" style="margin-left: 10px;"></i>';
+                });
+            }
+        });
+        
+        // Her input değiştiğinde hata mesajlarını temizle
+        const formInputs = heroForm.querySelectorAll('input, select, textarea');
         formInputs.forEach(input => {
             input.addEventListener('input', function() {
                 clearError(input);
@@ -249,6 +333,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (errorElement) {
             errorElement.remove();
         }
+    }
+    
+    // Form alanlarını temizleme fonksiyonu
+    function clearForm(form) {
+        const formInputs = form.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            if (input.type === 'checkbox') {
+                input.checked = false;
+            } else {
+                input.value = '';
+            }
+            clearError(input);
+        });
     }
     
     function isValidEmail(email) {
@@ -1057,6 +1154,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Dikey Video Carousel İşlevleri
     initVerticalVideoCarousel();
+
+    // Reviews Slider Fonksiyonları
+    initReviewsSlider();
 });
 
 // Genel Carousel/Slider Fonksiyonu
@@ -1475,12 +1575,79 @@ function initCountryFormModal() {
     if (countryContactForm) {
         countryContactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Form gönderimi işlemi burada yapılacak
-            alert(`${document.getElementById('selectedCountry').value} için başvurunuz alındı!`);
-            countryFormModal.classList.remove('show');
-            setTimeout(() => {
-                countryFormModal.style.display = 'none';
-            }, 500);
+            
+            let isValid = true;
+            const formInputs = countryContactForm.querySelectorAll('input, select, textarea');
+            
+            formInputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    isValid = false;
+                    showError(input, 'Bu alan zorunludur');
+                } else if (input.type === 'email' && input.value && !isValidEmail(input.value)) {
+                    isValid = false;
+                    showError(input, 'Geçerli bir e-posta adresi giriniz');
+                } else {
+                    clearError(input);
+                }
+            });
+            
+            if (isValid) {
+                // Form verilerini al
+                const formData = new FormData(countryContactForm);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+
+                // UTM parametrelerini çerezden oku ve ekle
+                const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+                utmParams.forEach(param => {
+                    formObject[param] = getCookie(param) || '';
+                });
+
+                // Butonu devre dışı bırak ve yükleniyor durumunu göster
+                const submitButton = countryContactForm.querySelector('.form-submit-btn');
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
+
+                // Webhook'a gönder
+                fetch('https://hook.eu2.make.com/k1dkxp5mtefzotojaobz12sa7enkl7al', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formObject)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Webhook gönderimi başarısız oldu.');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Ülke formu webhook yanıtı:', data);
+                    // Başarılı gönderimden sonra modalı kapat ve yönlendir
+                    countryFormModal.classList.remove('show');
+                    setTimeout(() => {
+                        countryFormModal.style.display = 'none';
+                        window.location.href = 'https://avrupagoc.com/tesekkurler';
+                    }, 500);
+                })
+                .catch(error => {
+                    console.error('Ülke formu gönderim hatası:', error);
+                    showError(submitButton, 'Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = '<span>Hemen Başvur</span><i class="fas fa-paper-plane" style="margin-left: 10px;"></i>';
+                });
+            }
+        });
+        
+        // Her input değiştiğinde hata mesajlarını temizle
+        const formInputs = countryContactForm.querySelectorAll('input, select, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                clearError(input);
+            });
         });
     }
 }
@@ -2085,4 +2252,222 @@ function cleanupAndCloseModal(modal, video) {
             console.error('Video temizleme hatası:', err);
         }
     }, 300);
+}
+
+// Reviews Slider Fonksiyonları
+function initReviewsSlider() {
+    const reviewsCarousel = document.querySelector('.reviews-carousel');
+    const prevBtn = document.querySelector('.reviews-prev-btn');
+    const nextBtn = document.querySelector('.reviews-next-btn');
+    const reviewCards = document.querySelectorAll('.review-card');
+    const reviewsDots = document.querySelectorAll('.reviews-dot');
+    
+    if (!reviewsCarousel || !prevBtn || !nextBtn) {
+        console.log('Reviews slider elementleri bulunamadı');
+        return;
+    }
+    
+    let currentIndex = 0;
+    const cardWidth = reviewCards[0].offsetWidth + 20; // 20px gap
+    const visibleCards = Math.floor(reviewsCarousel.offsetWidth / cardWidth);
+    const maxIndex = Math.max(0, reviewCards.length - visibleCards);
+    
+    console.log('Reviews slider başlatıldı:', {
+        cardWidth,
+        visibleCards,
+        maxIndex,
+        totalCards: reviewCards.length
+    });
+    
+    // İleri butonu
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateSlider();
+        }
+    });
+    
+    // Geri butonu
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
+    });
+    
+    // Noktalara tıklama
+    reviewsDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = Math.min(index, maxIndex);
+            updateSlider();
+        });
+    });
+    
+    // Slider'ı güncelle
+    function updateSlider() {
+        const scrollPosition = currentIndex * cardWidth;
+        reviewsCarousel.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
+        
+        // Noktaları güncelle
+        reviewsDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Butonları güncelle
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+        
+        console.log('Slider güncellendi:', {
+            currentIndex,
+            scrollPosition,
+            maxIndex
+        });
+    }
+    
+    // Dokunmatik kaydırma
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    reviewsCarousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - reviewsCarousel.offsetLeft;
+        scrollLeft = reviewsCarousel.scrollLeft;
+    });
+    
+    reviewsCarousel.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+    
+    reviewsCarousel.addEventListener('mouseup', () => {
+        isDown = false;
+        // Kaydırma sonrası en yakın kartı bul
+        const scrollPosition = reviewsCarousel.scrollLeft;
+        currentIndex = Math.round(scrollPosition / cardWidth);
+        currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+        updateSlider();
+    });
+    
+    reviewsCarousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - reviewsCarousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        reviewsCarousel.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Dokunmatik ekran desteği
+    reviewsCarousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - reviewsCarousel.offsetLeft;
+        scrollLeft = reviewsCarousel.scrollLeft;
+    }, { passive: true });
+    
+    reviewsCarousel.addEventListener('touchmove', (e) => {
+        if (!startX) return;
+        const x = e.touches[0].pageX - reviewsCarousel.offsetLeft;
+        const walk = (x - startX) * 2;
+        reviewsCarousel.scrollLeft = scrollLeft - walk;
+    }, { passive: true });
+    
+    reviewsCarousel.addEventListener('touchend', () => {
+        if (startX) {
+            const scrollPosition = reviewsCarousel.scrollLeft;
+            currentIndex = Math.round(scrollPosition / cardWidth);
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+            updateSlider();
+            startX = null;
+        }
+    });
+    
+    // Başlangıç durumu
+    updateSlider();
+    
+    // Ekran boyutu değiştiğinde yeniden hesapla
+    window.addEventListener('resize', () => {
+        const newCardWidth = reviewCards[0].offsetWidth + 20;
+        const newVisibleCards = Math.floor(reviewsCarousel.offsetWidth / newCardWidth);
+        const newMaxIndex = Math.max(0, reviewCards.length - newVisibleCards);
+        
+        if (newMaxIndex !== maxIndex) {
+            currentIndex = Math.min(currentIndex, newMaxIndex);
+            updateSlider();
+        }
+    });
+}
+
+// Sayfa yüklendiğinde reviews slider'ı başlat
+document.addEventListener('DOMContentLoaded', function() {
+    // Mevcut kodlar...
+    
+    // Reviews slider'ı başlat
+    initReviewsSlider();
+    
+    // Dikey video carousel'i başlat
+    initVerticalVideoCarousel();
+    
+    // Video modal'ı başlat
+    setupVideoModal();
+    
+    // Tüm carousel'leri başlat
+    setupCarousel('.universities-slider', '.universities-prev', '.universities-next', '.universities-dots');
+    setupCarousel('.flags-slider', '.flags-prev', '.flags-next', '.flags-dots');
+    
+    // Service carousel'i başlat
+    initServiceCarousel();
+    
+    // Team carousel'i başlat
+    initTeamCarousel();
+    
+    // Sayı animasyonlarını başlat
+    animateNumbers();
+    
+    // Form görünürlük kontrolü
+    checkFormVisibility();
+    
+    // Mobil viewport height ayarla
+    setMobileViewportHeight();
+    
+    // Dokunmatik kaydırma etkinleştir
+    enableTouchScroll('.mobile-touch-scroll');
+}); 
+
+// Başarılı form gönderimi popup'ı
+function showSuccessPopup() {
+    // Eğer daha önce popup varsa kaldır
+    const existing = document.getElementById('success-popup');
+    if (existing) existing.remove();
+
+    // Popup elementi oluştur
+    const popup = document.createElement('div');
+    popup.id = 'success-popup';
+    popup.style.position = 'fixed';
+    popup.style.top = '0';
+    popup.style.left = '0';
+    popup.style.width = '100vw';
+    popup.style.height = '100vh';
+    popup.style.background = 'rgba(0,0,0,0.5)';
+    popup.style.display = 'flex';
+    popup.style.alignItems = 'center';
+    popup.style.justifyContent = 'center';
+    popup.style.zIndex = '9999';
+
+    popup.innerHTML = `
+        <div style="background: #fff; padding: 32px 24px; border-radius: 12px; box-shadow: 0 4px 32px rgba(0,0,0,0.15); max-width: 90vw; width: 350px; text-align: center;">
+            <div style="font-size: 32px; color: #ff8a00; margin-bottom: 12px;">🎉</div>
+            <div style="font-size: 18px; font-weight: bold; margin-bottom: 8px;">Tebrikler!</div>
+            <div style="font-size: 15px; margin-bottom: 18px;">1 haftalık dil kursu kazandınız,<br>Danışmanlarımız sizinle iletişime geçecek.</div>
+            <button id="close-success-popup" style="margin-top: 8px; padding: 8px 20px; background: #ff8a00; color: #fff; border: none; border-radius: 6px; font-size: 15px; cursor: pointer;">Tamam</button>
+        </div>
+    `;
+
+    document.body.appendChild(popup);
+    document.body.style.overflow = 'hidden';
+
+    document.getElementById('close-success-popup').onclick = function() {
+        popup.remove();
+        document.body.style.overflow = '';
+    };
 } 

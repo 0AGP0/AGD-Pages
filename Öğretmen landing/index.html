@@ -111,7 +111,9 @@
             <!-- Sol Kısım - Öğrenci Resmi -->
             <div class="hero-left">
                 <div class="students-quote">
-                    <p>1 Yılda 500 Öğrencimizin Avrupa hayalini gerçekleştirmenin haklı gururunu yaşıyoruz. '<strong>Kararlıyız, devamı gelecek, senin için gelecek</strong>'<br>İhsan Şamil LL.M. - Avrupa Göç Kurucusu</p>
+                    <p>1 Yılda 500 öğrencinin Avrupa hayalini gerçekleştirmenin gururunu yaşıyoruz. 
+                        <br><strong>"Kararlıyız, devamı gelecek, <br>Senin için Gelecek"</strong>
+                          <br> - İhsan Şamil | Avrupa Göç Eğitim Şefi</p>
                 </div>
                 <div class="students-image">
                     <img src="https://avrupagoc.com/wp-content/uploads/2025/07/ogrenci.png" alt="Öğrenciler" title="">
@@ -225,18 +227,19 @@
             <div class="hero-right">
                 <div class="contact-form">
                     <h3>Ücretsiz Danışmanlık</h3>
+                    <p style="text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 20px;">Uzman danışmanlarımızla 10 dakikalık ücretsiz görüşme</p>
                     <form>
                         <div class="form-group">
-                            <input type="text" placeholder="Ad Soyad" required>
+                            <input type="text" id="hero-fullname" name="fullname" placeholder="Ad Soyad" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-posta" required>
+                            <input type="email" id="hero-email" name="email" placeholder="E-posta" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Telefon Numarası" required>
+                            <input type="tel" id="hero-phone" name="phone" placeholder="Telefon" required>
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select id="hero-service" name="service" required>
                                 <option value="">Hayalinizdeki Programı Seçin</option>
                                 <option value="dil-okulu">Dil Okulu</option>
                                 <option value="universite">Üniversite</option>
@@ -245,9 +248,22 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="text" name="coupon_code" placeholder="Kupon Kodu (Varsa)" style="text-transform: uppercase;">
+                            <input type="text" id="hero-coupon_code" name="coupon_code" placeholder="Kupon Kodu (Varsa)" style="text-transform: uppercase;">
                         </div>
-                        <button type="submit" class="avsubmitbtn">Gönder</button>
+                        <div class="form-group">
+                            <div class="kvkk-checkbox">
+                                <input type="checkbox" id="hero-kvkk" name="kvkk" required>
+                                <label for="hero-kvkk">
+                                    <a href="#" target="_blank">KVKK</a> ve <a href="#" target="_blank">Kişisel Veriler</a> politikasını kabul ediyorum.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="avsubmitbtn" style="background-color: #4285F4; color: white; padding: 12px 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%;">
+                                <span>Hemen Başvur</span>
+                                <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -390,11 +406,11 @@
             
             <!-- Daha Fazla Üniversite Keşfet Butonu -->
             <div class="discover-more-section">
-                <button class="avdiscoverbtn">
+                <a href="#form-section" class="avdiscoverbtn">
                     <i class="fas fa-search"></i>
                     <span>Üniversiteleri Keşfet</span>
                     <i class="fas fa-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -513,7 +529,7 @@
             <div class="google-reviews-section" data-aos="fade-up" data-aos-delay="100">
                 <div class="reviews-header">
                     <h2 class="reviews-title">Öğrencilerimizin Yorumları</h2>
-                    <div class="google-badge">
+                    <a href="https://www.google.com/search?q=Avrupa%20G%C3%B6%C3%A7%20Yurtd%C4%B1%C5%9F%C4%B1%20E%C4%9Fitim%20%26%20Kariyer%20Dan%C4%B1%C5%9Fmanl%C4%B1k%20Yorumlar&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxtDAyNDc3tzQ1NTUztjA3NjIyNtvAyPiK0cmxrKi0IFHB_fC2w8sVIkuLSlKObDw6_8hGBdcj8zNLMnMV1BS8E4syK1OLFFwS80ByuYl5OUc2ZitE5heV5uYkFi1ipYIhAFG07KqlAAAA&rldimm=18217779555638732236&tbm=lcl&hl=tr&sa=X&ved=0CB8Q9fQKKABqFwoTCKig8JWlso4DFQAAAAAdAAAAABAG&biw=1920&bih=957&dpr=1#lkt=LocalPoiReviews" target="_blank" class="google-badge">
                         <img src="https://avrupagoc.com/wp-content/uploads/2023/04/Avrupag.png" alt="Google Logo" class="google-logo">
                         <div class="reviews-stats">
                             <div class="stars">
@@ -526,7 +542,7 @@
                             </div>
                             <p>1598 değerlendirme</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- Yorumlar Carousel -->
@@ -799,13 +815,7 @@
                     <button class="reviews-next-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
 
-                <!-- Google Yorum CTA -->
-                <div class="reviews-cta" data-aos="fade-up">
-                    <a href="#" class="google-review-btn">
-                        <img src="https://avrupagoc.com/wp-content/uploads/2023/04/Avrupag.png" alt="Google">
-                        Google'da bizi değerlendirin
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -852,16 +862,8 @@
                 <div class="form-center" data-aos="fade-up" data-aos-delay="200">
                     <form id="contactForm" class="contact-form">
                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-field">
-                                    <label for="firstname">İsim <span class="required">*</span></label>
-                                    <input type="text" id="firstname" name="firstname" placeholder="İsminizi giriniz" required>
-                                </div>
-                                <div class="input-field">
-                                    <label for="lastname">Soyisim <span class="required">*</span></label>
-                                    <input type="text" id="lastname" name="lastname" placeholder="Soyisminizi giriniz" required>
-                                </div>
-                            </div>
+                            <label for="fullname">Ad Soyad <span class="required">*</span></label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Ad Soyad giriniz" required>
                         </div>
                         
                         <div class="form-group">
@@ -877,13 +879,11 @@
                         <div class="form-group">
                             <label for="service">Seçilen Hizmet <span class="required">*</span></label>
                             <select id="service" name="service" required>
-                                <option value="" disabled selected>Hizmet seçiniz</option>
-                                <option value="lisans">Lisans</option>
+                                <option value="">Hayalinizdeki Programı Seçin</option>
+                                <option value="dil-okulu">Dil Okulu</option>
+                                <option value="universite">Üniversite</option>
                                 <option value="yukseklisans">Yüksek Lisans</option>
-                                <option value="dilkursu">Dil Kursu</option>
                                 <option value="yazokulu">Yaz Okulu</option>
-                                <option value="workandtravel">Work and Travel</option>
-                                <option value="diger">Diğer</option>
                             </select>
                         </div>
                         
@@ -891,7 +891,14 @@
                             <label for="coupon_code">Kupon Kodu</label>
                             <input type="text" id="coupon_code" name="coupon_code" placeholder="Kupon Kodu (Varsa)" style="text-transform: uppercase;">
                         </div>
-                        
+                        <div class="form-group">
+                            <div class="kvkk-checkbox">
+                                <input type="checkbox" id="kvkk" name="kvkk" required>
+                                <label for="kvkk">
+                                    <a href="#" target="_blank">KVKK</a> ve <a href="#" target="_blank">Kişisel Veriler</a> politikasını kabul ediyorum.
+                                </label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <button type="submit" class="form-submit-btn" style="background-color: #4285F4; color: white; padding: 12px 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%;">
                                 <span>Hemen Başvur</span>
@@ -1461,67 +1468,6 @@
                     Tarayıcınız video oynatmayı desteklemiyor.
                 </video>
                 <div class="video-error-message">Video yüklenemedi. Lütfen tekrar deneyin.</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Ülke Formu Modal -->
-    <div class="country-form-modal" id="countryFormModal">
-        <div class="country-modal-content" style="max-height: 80vh; overflow-y: auto;">
-            <span class="close-country-modal">&times;</span>
-            <div class="country-modal-header">
-                <div class="country-modal-flag">
-                    <img id="modalCountryFlag" src="" alt="Ülke Bayrağı">
-                </div>
-                <h3 id="modalCountryTitle">Ülke ile ilgili bilgi almak için hemen iletişime geçin</h3>
-            </div>
-            <div class="country-modal-body">
-                <form id="countryContactForm" class="contact-form">
-                    <input type="hidden" id="selectedCountry" name="selectedCountry" value="">
-                    
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-field">
-                                <label for="modal-firstname">İsim <span class="required">*</span></label>
-                                <input type="text" id="modal-firstname" name="firstname" placeholder="İsminizi giriniz" required>
-                            </div>
-                            <div class="input-field">
-                                <label for="modal-lastname">Soyisim <span class="required">*</span></label>
-                                <input type="text" id="modal-lastname" name="lastname" placeholder="Soyisminizi giriniz" required>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="modal-email">E-posta <span class="required">*</span></label>
-                        <input type="email" id="modal-email" name="email" placeholder="E-posta adresinizi giriniz" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="modal-phone">Telefon <span class="required">*</span></label>
-                        <input type="tel" id="modal-phone" name="phone" placeholder="Telefon numaranızı giriniz" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="modal-service">Seçilen Hizmet <span class="required">*</span></label>
-                        <select id="modal-service" name="service" required>
-                            <option value="" disabled selected>Hizmet seçiniz</option>
-                            <option value="lisans">Lisans</option>
-                            <option value="yukseklisans">Yüksek Lisans</option>
-                            <option value="dilkursu">Dil Kursu</option>
-                            <option value="yazokulu">Yaz Okulu</option>
-                            <option value="workandtravel">Work and Travel</option>
-                            <option value="diger">Diğer</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="form-submit-btn" style="background-color: #4285F4; color: white; padding: 12px 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; border: none; font-weight: 600; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); width: 100%;">
-                            <span>Hemen Başvur</span>
-                            <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>

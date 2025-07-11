@@ -4612,6 +4612,27 @@ textarea {
     }
 }
 
+.google-badge {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.google-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Hizmetler Bölümü Mobil Resim Tasarımı */
 @media screen and (max-width: 992px) {
     .services-images {
@@ -6648,6 +6669,17 @@ textarea {
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.google-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
 }
 
 .google-logo {
@@ -6691,6 +6723,7 @@ textarea {
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    scroll-behavior: smooth;
 }
 
 .reviews-carousel::-webkit-scrollbar {
@@ -6699,6 +6732,7 @@ textarea {
 
 .review-card {
     flex: 0 0 calc(33.333% - 15px); /* 3 kart yan yana */
+    min-width: 300px; /* Minimum genişlik */
     scroll-snap-align: center;
     background: #fff;
     border-radius: 15px;
@@ -6916,6 +6950,7 @@ textarea {
     .review-card {
         flex: 0 0 85%; /* Tek kart görünümü */
         min-width: 280px;
+        max-width: 350px;
     }
     
     .reviewer-avatar {
@@ -6982,6 +7017,8 @@ textarea {
     
     .review-card {
         padding: 15px;
+        min-width: 250px;
+        max-width: 320px;
     }
     
     .review-content p {
@@ -8430,5 +8467,474 @@ html body .avherobtns .btn-secondary:hover,
     }
 }
 
+/* ZORUNLU OVERRIDE: Hero özellik simgeleri sarı ve kart altı boşluğu azaltıldı */
+.feature-icon {
+    color: #FFD700 !important;
+}
+.country-card {
+    margin-bottom: 10px !important;
+}
 
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+}
+/* HOME 1 HERO MOBİL TASARIMI BİREBİR */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+    .hero-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+        min-height: auto;
+        padding-top: 2rem;
+        height: auto;
+    }
+    .hero-left {
+        display: none;
+    }
+    .hero-center {
+        flex: 1;
+        padding: 1.5rem;
+        margin: 0;
+        width: 100%;
+        order: 1;
+    }
+    .flags-slider {
+        height: 30px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+    }
+    .flags-container {
+        gap: 0.5rem;
+        animation: slideFlags 20s linear infinite;
+        width: calc(18 * 35px + 17 * 0.5rem);
+    }
+    .flag {
+        width: 35px;
+        height: 25px;
+        min-width: 35px;
+    }
+    .success-badges {
+        display: none;
+    }
+    .main-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        white-space: nowrap;
+    }
+    .changing-text {
+        white-space: nowrap;
+        display: inline-block;
+    }
+    .features {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    .feature {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        text-align: center;
+        flex: 1;
+    }
+    .avherobtns {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    .avherobtns .btn,
+    .avherobtns .btn-primary,
+    .avherobtns .btn-secondary,
+    body .avherobtns .btn,
+    html body .avherobtns .btn,
+    .hero .avherobtns .btn,
+    .hero-center .avherobtns .btn {
+        width: 100% !important;
+        padding: 1rem 1rem !important;
+        font-size: 0.9rem !important;
+        min-height: auto !important;
+        height: auto !important;
+        border-radius: 8px !important;
+        line-height: 1.3 !important;
+        letter-spacing: 0.2px !important;
+        text-transform: none !important;
+        font-weight: 600 !important;
+    }
+    .hero-right {
+        width: 100%;
+        order: 2;
+        margin-top: 0;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+    .contact-form,
+    body .contact-form,
+    html body .contact-form,
+    .hero-right .contact-form,
+    .elementor-widget-container .contact-form,
+    .elementor-element .contact-form {
+        padding: 2rem !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-radius: 15px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+        margin-bottom: 2rem !important;
+        order: 2 !important;
+    }
+    .contact-form h3,
+    body .contact-form h3,
+    html body .contact-form h3,
+    .hero-right .contact-form h3,
+    .elementor-widget-container .contact-form h3,
+    .elementor-element .contact-form h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .form-group,
+    body .form-group,
+    html body .form-group,
+    .contact-form .form-group,
+    .elementor-widget-container .form-group,
+    .elementor-element .form-group {
+        margin-bottom: 1rem !important;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    body .form-group input,
+    body .form-group select,
+    body .form-group textarea,
+    html body .form-group input,
+    html body .form-group select,
+    html body .form-group textarea,
+    .contact-form .form-group input,
+    .contact-form .form-group select,
+    .contact-form .form-group textarea,
+    .elementor-widget-container .form-group input,
+    .elementor-widget-container .form-group select,
+    .elementor-widget-container .form-group textarea,
+    .elementor-element .form-group input,
+    .elementor-element .form-group select,
+    .elementor-element .form-group textarea {
+        padding: 0.8rem !important;
+        font-size: 0.9rem !important;
+    }
+    .form-group textarea,
+    body .form-group textarea,
+    html body .form-group textarea,
+    .contact-form .form-group textarea,
+    .elementor-widget-container .form-group textarea,
+    .elementor-element .form-group textarea {
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 80px !important;
+    }
+    .avsubmitbtn,
+    body .avsubmitbtn,
+    html body .avsubmitbtn,
+    .contact-form .avsubmitbtn,
+    .hero-right .avsubmitbtn,
+    .elementor-widget-container .avsubmitbtn,
+    .elementor-element .avsubmitbtn {
+        width: 100% !important;
+        padding: 1rem !important;
+        font-size: 1rem !important;
+    }
+}/* KVKK Checkbox - Tam Kare */
+.kvkk-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
 
+.kvkk-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-width: 8px;
+    min-height: 8px;
+    max-width: 8px;
+    max-height: 8px;
+}
+
+.kvkk-checkbox input[type="checkbox"]:checked {
+    background-color: #ff8a00;
+    border-color: #ff8a00;
+}
+
+.kvkk-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 2px;
+    height: 3px;
+    border: solid white;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.kvkk-checkbox input[type="checkbox"]:hover {
+    border-color: #ff8a00;
+}
+
+.kvkk-checkbox input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(255, 138, 0, 0.3);
+}
+
+.kvkk-checkbox label {
+    cursor: pointer;
+    color: #555;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    user-select: none;
+}
+
+.kvkk-checkbox label a {
+    color: #ff8a00;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.kvkk-checkbox label a:hover {
+    color: #ffc105;
+}
+
+/* Form hata durumunda */
+.form-group.error .kvkk-checkbox input[type="checkbox"] {
+    border-color: #e74c3c;
+}
+
+/* Mobil için */
+@media screen and (max-width: 768px) {
+    .kvkk-checkbox {
+        font-size: 12px;
+        gap: 5px;
+        margin: 8px 0;
+    }
+    
+    .kvkk-checkbox input[type="checkbox"] {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        min-height: 7px;
+        max-width: 7px;
+        max-height: 7px;
+    }
+    
+    .kvkk-checkbox input[type="checkbox"]:checked::after {
+        top: 1px;
+        left: 2px;
+        width: 2px;
+        height: 2px;
+        border-width: 0 1px 1px 0;
+    }
+    
+    .kvkk-checkbox label {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .kvkk-checkbox {
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .kvkk-checkbox input[type="checkbox"] {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        min-height: 6px;
+        max-width: 6px;
+        max-height: 6px;
+    }
+    
+    .kvkk-checkbox input[type="checkbox"]:checked::after {
+        top: 1px;
+        left: 2px;
+        width: 1px;
+        height: 2px;
+        border-width: 0 1px 1px 0;
+    }
+    
+    .kvkk-checkbox label {
+        font-size: 11px;
+    }
+}
+/* Başarı Popup Stilleri */
+.success-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.success-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.success-popup {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.success-popup-overlay.active .success-popup {
+    transform: scale(1);
+}
+
+.success-popup-header {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.close-popup-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close-popup-btn:hover {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.success-icon {
+    margin-bottom: 20px;
+}
+
+.success-icon i {
+    font-size: 60px;
+    color: #ff8a00;
+    animation: bounce 0.6s ease;
+}
+
+.success-popup h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.success-popup p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.success-message {
+    color: #ff8a00 !important;
+    font-weight: 500;
+    font-size: 14px !important;
+}
+
+.popup-ok-btn {
+    background: linear-gradient(135deg, #ff8a00, #ffc105);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 138, 0, 0.3);
+}
+
+.popup-ok-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 138, 0, 0.4);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobil için popup stilleri */
+@media screen and (max-width: 768px) {
+    .success-popup {
+        padding: 25px 20px;
+        margin: 20px;
+    }
+    
+    .success-icon i {
+        font-size: 50px;
+    }
+    
+    .success-popup h3 {
+        font-size: 20px;
+    }
+    
+    .success-popup p {
+        font-size: 14px;
+    }
+    
+    .popup-ok-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
